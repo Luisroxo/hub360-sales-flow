@@ -1,117 +1,162 @@
 
-import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export const Contact = () => {
+  const contactInfo = [
+    {
+      icon: MapPin,
+      title: "Localização",
+      content: "São Paulo, SP - Atuação Nacional",
+      gradient: "from-blue-500 to-blue-600"
+    },
+    {
+      icon: Mail,
+      title: "E-mail",
+      content: "contato@hub360plus.com.br",
+      gradient: "from-purple-500 to-purple-600"
+    },
+    {
+      icon: Phone,
+      title: "Telefone",
+      content: "(11) 9999-9999",
+      gradient: "from-emerald-500 to-emerald-600"
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp",
+      content: "(11) 9999-9999",
+      gradient: "from-green-500 to-green-600"
+    }
+  ];
+
   return (
-    <section id="contato" className="py-20 bg-white">
+    <section id="contato" className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-purple-900 mb-6">
-              Vamos conversar?
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Entre em Contato
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
+              Vamos{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+                conversar?
+              </span>
             </h2>
-            <p className="text-xl text-purple-700 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Entre em contato conosco e descubra como podemos ser seu parceiro comercial no mundo digital.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-purple-900 mb-8">
-                Entre em contato
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Contact Info */}
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-slate-900 mb-8">
+                Informações de contato
               </h3>
               
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-purple-600" />
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-start space-x-4 group">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${info.gradient} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                      <info.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900 mb-1">{info.title}</h4>
+                      <p className="text-slate-600">{info.content}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-purple-900">Localização</h4>
-                    <p className="text-purple-700">São Paulo, SP - Atuação Nacional</p>
-                  </div>
-                </div>
+                ))}
+              </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-purple-900">E-mail</h4>
-                    <p className="text-purple-700">contato@hub360plus.com.br</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-purple-900">Telefone</h4>
-                    <p className="text-purple-700">(11) 9999-9999</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-purple-900">WhatsApp</h4>
-                    <p className="text-purple-700">(11) 9999-9999</p>
-                  </div>
+              {/* Additional Info */}
+              <div className="bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-2xl border border-slate-200 mt-12">
+                <h4 className="font-semibold text-slate-900 mb-4">Horário de Atendimento</h4>
+                <div className="space-y-2 text-slate-600">
+                  <p>Segunda à Sexta: 8h às 18h</p>
+                  <p>Sábado: 8h às 12h</p>
+                  <p>Domingo: Fechado</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100">
-              <h3 className="text-2xl font-bold text-purple-900 mb-6">
+            {/* Contact Form */}
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl">
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">
                 Envie uma mensagem
               </h3>
               
-              <form className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-purple-700 mb-1">
-                    Nome
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
-                    placeholder="Seu nome completo"
-                  />
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-2">
+                      Nome
+                    </label>
+                    <Input
+                      id="firstName"
+                      placeholder="Seu nome"
+                      className="border-slate-200 focus:border-purple-500 focus:ring-purple-500"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 mb-2">
+                      Sobrenome
+                    </label>
+                    <Input
+                      id="lastName"
+                      placeholder="Seu sobrenome"
+                      className="border-slate-200 focus:border-purple-500 focus:ring-purple-500"
+                    />
+                  </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-purple-700 mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
                     E-mail
                   </label>
-                  <input
+                  <Input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
                     placeholder="seu@email.com"
+                    className="border-slate-200 focus:border-purple-500 focus:ring-purple-500"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                    Telefone
+                  </label>
+                  <Input
+                    type="tel"
+                    id="phone"
+                    placeholder="(11) 99999-9999"
+                    className="border-slate-200 focus:border-purple-500 focus:ring-purple-500"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-purple-700 mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
                     Mensagem
                   </label>
-                  <textarea
+                  <Textarea
                     id="message"
                     rows={4}
-                    className="w-full px-4 py-3 border border-purple-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all resize-none"
                     placeholder="Conte-nos sobre seu projeto..."
-                  ></textarea>
+                    className="border-slate-200 focus:border-purple-500 focus:ring-purple-500 resize-none"
+                  />
                 </div>
                 
-                <button
+                <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   Enviar mensagem
-                </button>
+                  <Send className="ml-2 h-4 w-4" />
+                </Button>
               </form>
             </div>
           </div>
