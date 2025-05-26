@@ -1,6 +1,7 @@
 
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AnimatedStat } from "./AnimatedStat";
 
 export const Hero = () => {
   return (
@@ -51,20 +52,26 @@ export const Hero = () => {
             </div>
           </div>
           
-          {/* Stats */}
+          {/* Stats with Animation */}
           <div className="grid md:grid-cols-3 gap-8 mt-20">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-              <div className="text-slate-600">Projetos realizados</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">98%</div>
-              <div className="text-slate-600">Taxa de sucesso</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">24h</div>
-              <div className="text-slate-600">Tempo de resposta</div>
-            </div>
+            <AnimatedStat 
+              value={500} 
+              suffix="+" 
+              label="Projetos realizados"
+              delay={0}
+            />
+            <AnimatedStat 
+              value={98} 
+              suffix="%" 
+              label="Taxa de sucesso"
+              delay={300}
+            />
+            <AnimatedStat 
+              value={24} 
+              suffix="h" 
+              label="Tempo de resposta"
+              delay={600}
+            />
           </div>
         </div>
       </div>
