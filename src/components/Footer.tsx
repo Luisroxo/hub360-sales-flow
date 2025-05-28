@@ -1,5 +1,4 @@
 
-
 export const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-purple-900 to-purple-800 text-white py-12">
@@ -7,15 +6,21 @@ export const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <img 
-                src="/lovable-uploads/6395007d-7a45-4bab-81d6-de70f799376d.png" 
-                alt="HUB360PLUS" 
-                className="h-24 w-auto mb-4 brightness-0 invert"
-                onError={(e) => {
-                  console.log('Erro ao carregar imagem do footer:', e);
-                  e.currentTarget.style.display = 'none';
-                }}
-              />
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/lovable-uploads/6395007d-7a45-4bab-81d6-de70f799376d.png" 
+                  alt="HUB360PLUS" 
+                  className="h-20 w-auto brightness-0 invert"
+                  onError={(e) => {
+                    console.log('Erro ao carregar imagem do footer:', e);
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold text-white">HUB360PLUS</span>
+                  <span className="text-xs text-purple-200 font-medium">NOSSO NEGÓCIO É FAZER O SEU VENDER MAIS!</span>
+                </div>
+              </div>
               <p className="text-purple-200 leading-relaxed">
                 Seu parceiro comercial no mundo digital. Transformamos oportunidades em resultados reais.
               </p>
