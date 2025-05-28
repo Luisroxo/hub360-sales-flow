@@ -22,7 +22,7 @@ export const Header = () => {
             <img 
               src="/lovable-uploads/6395007d-7a45-4bab-81d6-de70f799376d.png" 
               alt="HUB360PLUS" 
-              className="h-10 w-auto"
+              className="h-20 w-auto"
               onError={(e) => {
                 console.log('Erro ao carregar imagem do header:', e);
                 e.currentTarget.style.display = 'none';

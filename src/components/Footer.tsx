@@ -1,4 +1,5 @@
 
+
 export const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-purple-900 to-purple-800 text-white py-12">
@@ -9,7 +10,7 @@ export const Footer = () => {
               <img 
                 src="/lovable-uploads/6395007d-7a45-4bab-81d6-de70f799376d.png" 
                 alt="HUB360PLUS" 
-                className="h-12 w-auto mb-4 brightness-0 invert"
+                className="h-24 w-auto mb-4 brightness-0 invert"
                 onError={(e) => {
                   console.log('Erro ao carregar imagem do footer:', e);
                   e.currentTarget.style.display = 'none';
