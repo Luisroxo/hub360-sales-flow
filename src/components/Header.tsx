@@ -20,9 +20,13 @@ export const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/6a3c5c11-86da-4b95-95a8-6e1c7b4e8f9d.png" 
+              src="/lovable-uploads/6395007d-7a45-4bab-81d6-de70f799376d.png" 
               alt="HUB360PLUS" 
               className="h-10 w-auto"
+              onError={(e) => {
+                console.log('Erro ao carregar imagem do header:', e);
+                e.currentTarget.style.display = 'none';
+              }}
             />
           </div>
           

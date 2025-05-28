@@ -7,9 +7,13 @@ export const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <img 
-                src="/lovable-uploads/6a3c5c11-86da-4b95-95a8-6e1c7b4e8f9d.png" 
+                src="/lovable-uploads/6395007d-7a45-4bab-81d6-de70f799376d.png" 
                 alt="HUB360PLUS" 
                 className="h-12 w-auto mb-4 brightness-0 invert"
+                onError={(e) => {
+                  console.log('Erro ao carregar imagem do footer:', e);
+                  e.currentTarget.style.display = 'none';
+                }}
               />
               <p className="text-purple-200 leading-relaxed">
                 Seu parceiro comercial no mundo digital. Transformamos oportunidades em resultados reais.
