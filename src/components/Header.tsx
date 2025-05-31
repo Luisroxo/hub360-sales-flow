@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,20 +17,16 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/6395007d-7a45-4bab-81d6-de70f799376d.png" 
               alt="HUB360PLUS" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
               onError={(e) => {
                 console.log('Erro ao carregar imagem do header:', e);
                 e.currentTarget.style.display = 'none';
               }}
             />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-purple-600">HUB360PLUS</span>
-              <span className="text-xs text-slate-600 font-medium">NOSSO NEGÓCIO É FAZER O SEU VENDER MAIS!</span>
-            </div>
           </div>
           
           {/* Desktop Navigation */}
