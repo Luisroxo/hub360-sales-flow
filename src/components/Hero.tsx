@@ -1,6 +1,4 @@
 
-import { ArrowRight, Play } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { AnimatedStat } from "./AnimatedStat";
 
 export const Hero = () => {
@@ -31,25 +29,6 @@ export const Hero = () => {
             <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed font-light">
               Somos mais do que representantes comerciais. Somos parceiros estratégicos que assumem a responsabilidade de vender seus produtos e serviços.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-lg"
-              >
-                Conhecer nossos serviços
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-xl font-semibold hover:bg-slate-50 hover:border-slate-400 transition-all duration-300 text-lg"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Ver demonstração
-              </Button>
-            </div>
           </div>
           
           {/* Stats with Animation */}
