@@ -1,5 +1,5 @@
 
-import { Building, ShoppingCart, Cog, ArrowRight } from "lucide-react";
+import { Building, ShoppingCart, Cog, ArrowRight, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -28,6 +28,14 @@ export const Services = () => {
       features: ["CRMs inteligentes", "Chatbots", "Fluxos automatizados"],
       gradient: "from-emerald-500 to-emerald-600",
       link: null
+    },
+    {
+      icon: Globe,
+      title: "Raspagem de Dados",
+      description: "Extraímos dados de websites de forma automatizada, especialmente útil para monitoramento de licitações e coleta de informações públicas.",
+      features: ["Extração automatizada", "Monitoramento de sites", "Dados estruturados"],
+      gradient: "from-orange-500 to-orange-600",
+      link: "/raspagem"
     }
   ];
 
@@ -49,7 +57,7 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
