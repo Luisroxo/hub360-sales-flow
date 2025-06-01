@@ -10,7 +10,7 @@ const Licitacoes = () => {
   const features = [
     {
       icon: TrendingUp,
-      title: "Acesso estratégico a editais bilionários",
+      title: "Acesso estratégico a editais",
       description: "Conectamos sua empresa aos maiores contratos públicos do país"
     },
     {
