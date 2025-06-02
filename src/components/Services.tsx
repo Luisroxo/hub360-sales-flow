@@ -19,7 +19,7 @@ export const Services = () => {
       description: "Desenvolvemos e operamos canais de vendas online, desde lojas virtuais até marketplaces, com estratégias de posicionamento e performance.",
       features: ["Lojas virtuais", "Marketplaces", "Estratégias de performance"],
       gradient: "from-purple-500 to-purple-600",
-      link: null
+      link: "/ecommerce"
     },
     {
       icon: Cog,
@@ -27,7 +27,7 @@ export const Services = () => {
       description: "Implantamos sistemas inteligentes, como CRMs, chatbots e fluxos automatizados, para transformar leads em vendas com agilidade e escala.",
       features: ["CRMs inteligentes", "Chatbots", "Fluxos automatizados"],
       gradient: "from-emerald-500 to-emerald-600",
-      link: null
+      link: "/automacao-vendas"
     }
   ];
 
@@ -77,17 +77,7 @@ export const Services = () => {
                 ))}
               </ul>
               
-              {service.link ? (
-                <Link to={service.link}>
-                  <Button 
-                    variant="ghost" 
-                    className="group-hover:bg-purple-50 group-hover:text-purple-600 transition-all p-0 h-auto font-semibold"
-                  >
-                    Saiba mais
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              ) : (
+              <Link to={service.link}>
                 <Button 
                   variant="ghost" 
                   className="group-hover:bg-purple-50 group-hover:text-purple-600 transition-all p-0 h-auto font-semibold"
@@ -95,7 +85,7 @@ export const Services = () => {
                   Saiba mais
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              )}
+              </Link>
             </div>
           ))}
         </div>
