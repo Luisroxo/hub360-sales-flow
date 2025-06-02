@@ -1,10 +1,16 @@
+
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  // Check if we're on a subpage (not home page)
+  const isSubpage = location.pathname !== "/";
 
   const navItems = [
     { to: "/", label: "Início" },
@@ -12,6 +18,10 @@ export const Header = () => {
     { to: "/#sobre", label: "Sobre" },
     { to: "/#contato", label: "Contato" }
   ];
+
+  const handleBackClick = () => {
+    navigate("/");
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/50">
@@ -46,13 +56,23 @@ export const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Button or Back Button */}
           <div className="hidden lg:flex">
-            <Button 
-              className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-300"
-            >
-              Falar com especialista
-            </Button>
+            {isSubpage ? (
+              <Button 
+                onClick={handleBackClick}
+                className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Voltar
+              </Button>
+            ) : (
+              <Button 
+                className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                Falar com especialista
+              </Button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -78,11 +98,24 @@ export const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button 
-                className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 mt-4"
-              >
-                Falar com especialista
-              </Button>
+              {isSubpage ? (
+                <Button 
+                  onClick={() => {
+                    handleBackClick();
+                    setIsMenuOpen(false);
+                  }}
+                  className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 mt-4"
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  Voltar
+                </Button>
+              ) : (
+                <Button 
+                  className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 mt-4"
+                >
+                  Falar com especialista
+                </Button>
+              )}
             </div>
           </nav>
         )}

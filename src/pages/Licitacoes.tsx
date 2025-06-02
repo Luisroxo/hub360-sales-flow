@@ -1,10 +1,8 @@
-
-import { ArrowLeft, Building, CheckCircle, TrendingUp, Users, FileText, Shield } from "lucide-react";
+import { Building, CheckCircle, TrendingUp, Users, FileText, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Link } from "react-router-dom";
 
 const Licitacoes = () => {
   const features = [
@@ -52,16 +50,6 @@ const Licitacoes = () => {
         
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Back Button */}
-            <div className="mb-8">
-              <Link to="/">
-                <Button variant="ghost" className="text-slate-600 hover:text-slate-800">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Voltar para página inicial
-                </Button>
-              </Link>
-            </div>
-
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-8 border border-blue-200">
               <Building className="w-4 h-4" />
