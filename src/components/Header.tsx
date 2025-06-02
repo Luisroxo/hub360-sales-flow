@@ -3,13 +3,6 @@ import { useState } from "react";
 import { Menu, X, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,14 +14,9 @@ export const Header = () => {
 
   const navItems = [
     { to: "/", label: "Início" },
+    { to: "/#servicos", label: "Serviços" },
     { to: "/#sobre", label: "Sobre" },
     { to: "/#contato", label: "Contato" }
-  ];
-
-  const serviceItems = [
-    { to: "/licitacoes", label: "Licitações" },
-    { to: "/ecommerce", label: "E-commerce" },
-    { to: "/automacao-vendas", label: "Automação de Vendas" }
   ];
 
   const handleBackClick = () => {
@@ -66,32 +54,6 @@ export const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
-            
-            {/* Services Dropdown */}
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-slate-700 hover:text-purple-600 transition-colors font-medium bg-transparent">
-                    Serviços
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[300px] p-4">
-                      {serviceItems.map((service) => (
-                        <Link
-                          key={service.to}
-                          to={service.to}
-                          className="block p-3 rounded-lg hover:bg-slate-50 transition-colors"
-                        >
-                          <div className="font-medium text-slate-900 hover:text-purple-600">
-                            {service.label}
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
           </nav>
 
           {/* CTA Button or Back Button */}
@@ -136,23 +98,6 @@ export const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              
-              {/* Mobile Services Section */}
-              <div className="py-2">
-                <div className="text-slate-700 font-medium mb-2">Serviços</div>
-                <div className="pl-4 space-y-2">
-                  {serviceItems.map((service) => (
-                    <Link
-                      key={service.to}
-                      to={service.to}
-                      className="block text-slate-600 hover:text-purple-600 transition-colors py-1"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {service.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
               
               {isSubpage ? (
                 <Button 
