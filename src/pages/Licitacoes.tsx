@@ -1,3 +1,4 @@
+
 import { Building, CheckCircle, TrendingUp, Users, FileText, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -132,26 +133,6 @@ const Licitacoes = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Pronto para Participar das Maiores Licitações do País?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Entre em contato conosco e descubra como podemos conectar sua empresa ao maior mercado do Brasil
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-white text-blue-600 hover:bg-slate-50 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
-            >
-              Falar com especialista
-            </Button>
           </div>
         </div>
       </section>

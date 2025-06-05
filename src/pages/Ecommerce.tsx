@@ -1,5 +1,5 @@
 
-import { Search, Target, TrendingUp, BarChart3, Users, Settings, Mail, Phone, Globe } from "lucide-react";
+import { Search, Target, TrendingUp, BarChart3, Users, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
@@ -41,24 +41,6 @@ const Ecommerce = () => {
         "Dashboards Personalizados: Acompanhamos KPIs em tempo real para tomadas de decisão ágeis.",
         "Segmentação de Clientes: Utilizamos dados comportamentais para campanhas de CRM mais eficazes."
       ]
-    }
-  ];
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "contato@hub360.com.br",
-      href: "mailto:contato@hub360.com.br"
-    },
-    {
-      icon: Phone,
-      label: "(xx) xxxx-xxxx",
-      href: "tel:+55"
-    },
-    {
-      icon: Globe,
-      label: "hub360.com.br",
-      href: "https://hub360.com.br"
     }
   ];
 
@@ -144,37 +126,6 @@ const Ecommerce = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               A HUB360+ é o parceiro ideal para levar seu e-commerce ao próximo nível.
             </h2>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              Vamos conversar?
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {contactInfo.map((contact, index) => (
-                <a
-                  key={index}
-                  href={contact.href}
-                  className="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm text-white p-4 rounded-lg hover:bg-white/20 transition-all duration-300"
-                >
-                  <contact.icon className="w-5 h-5" />
-                  <span>{contact.label}</span>
-                </a>
-              ))}
-            </div>
-            
-            <Button 
-              size="lg" 
-              className="bg-white text-purple-600 hover:bg-slate-50 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
-            >
-              Falar com especialista
-            </Button>
           </div>
         </div>
       </section>

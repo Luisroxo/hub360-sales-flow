@@ -16,8 +16,7 @@ export const Header = () => {
 
   const navItems = [
     { to: "/", label: "Início" },
-    { to: "/sobre", label: "Sobre" },
-    { to: "/#contato", label: "Contato" }
+    { to: "/sobre", label: "Sobre" }
   ];
 
   const serviceItems = [
