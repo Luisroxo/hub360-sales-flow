@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Target, Users, Zap } from "lucide-react";
+import { Target, Users, Zap, Heart, Lightbulb, Eye, CheckCircle, MessageSquare } from "lucide-react";
 
 const Sobre = () => {
   const services = [
@@ -24,18 +24,31 @@ const Sobre = () => {
     }
   ];
 
-  const differentials = [
+  const values = [
     {
-      title: "Parceria Estratégica",
-      description: "Mais do que vender, assumimos a responsabilidade pelos resultados."
+      title: "Comprometimento com Resultados",
+      description: "Foco em entregar valor real e mensurável para nossos clientes.",
+      icon: <CheckCircle className="h-6 w-6 text-purple-600" />
     },
     {
-      title: "Tecnologia de Ponta",
-      description: "Utilizamos as melhores ferramentas e práticas do mercado para otimizar suas vendas."
+      title: "Inovação Contínua",
+      description: "Busca constante por soluções criativas e eficazes.",
+      icon: <Lightbulb className="h-6 w-6 text-purple-600" />
     },
     {
-      title: "Foco no Cliente",
-      description: "Desenvolvemos soluções personalizadas, alinhadas às necessidades e objetivos de cada cliente."
+      title: "Transparência",
+      description: "Comunicação clara e honesta em todas as etapas do processo.",
+      icon: <MessageSquare className="h-6 w-6 text-purple-600" />
+    },
+    {
+      title: "Colaboração",
+      description: "Trabalho em equipe para alcançar objetivos comuns.",
+      icon: <Users className="h-6 w-6 text-purple-600" />
+    },
+    {
+      title: "Excelência Operacional",
+      description: "Padrões elevados de qualidade em tudo o que fazemos.",
+      icon: <Target className="h-6 w-6 text-purple-600" />
     }
   ];
 
@@ -51,17 +64,88 @@ const Sobre = () => {
               Sobre Nós
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Mais que representantes comerciais: somos{" "}
+              Criamos canais de vendas que{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">
-                criadores de canais de vendas
+                geram resultados reais
               </span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Na HUB360+, nossa missão é clara: transformar oportunidades em resultados reais. 
-              Atuamos como parceiros estratégicos de vendas, assumindo a responsabilidade de 
-              comercializar seus produtos e serviços por meio de canais eficientes, sustentáveis 
-              e orientados a resultados.
+              Na HUB360+, somos mais do que representantes comerciais. Atuamos como parceiros estratégicos, 
+              especializados em desenvolver e gerenciar canais de vendas sob medida para empresas que 
+              desejam crescer de forma consistente e inovadora.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Missão, Visão */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12">
+              <Card className="border-2 border-gray-100 hover:border-purple-200 transition-all duration-300 hover:shadow-lg">
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <Heart className="h-8 w-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Nossa Missão
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Capacitar microempreendedores e empresas a expandirem suas vendas no mundo digital, 
+                    conectando produtos ao público certo com estratégia, tecnologia e ação.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-100 hover:border-purple-200 transition-all duration-300 hover:shadow-lg">
+                <CardContent className="p-8">
+                  <div className="mb-6">
+                    <Eye className="h-8 w-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Nossa Visão
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Ser reconhecida nacionalmente como a principal parceira estratégica na criação e 
+                    gestão de canais de vendas digitais, contribuindo para o sucesso sustentável de nossos clientes.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nossos Valores */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Nossos Valores
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {values.map((value, index) => (
+                <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      {value.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        {value.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {value.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -100,46 +184,17 @@ const Sobre = () => {
         </div>
       </section>
 
-      {/* Nosso diferencial */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Nosso diferencial
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {differentials.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Nossa presença */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8">
-              <MapPin className="h-12 w-12 text-purple-600 mx-auto mb-6" />
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Nossa presença
+                Nossa Presença
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Com sede em São Paulo e atuação em todo o território nacional, entregamos 
-                projetos personalizados que respeitam as particularidades de cada mercado e negócio.
+                Atuamos em todo o território nacional, entregamos projetos personalizados que 
+                respeitam as particularidades de cada mercado e negócio.
               </p>
             </div>
             
