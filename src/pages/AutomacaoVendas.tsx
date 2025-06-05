@@ -1,4 +1,3 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -77,11 +76,12 @@ const AutomacaoVendas = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-3 text-lg">
-                Solicitar Demonstração
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <Clock className="mr-2 h-5 w-5" />
+                Agendar Demonstração Agora
               </Button>
               <Button variant="outline" className="border-purple-200 text-purple-700 hover:bg-purple-50 px-8 py-3 text-lg">
-                Ver Resultados
+                <Target className="mr-2 h-5 w-5" />
+                Falar com Especialista
               </Button>
             </div>
           </div>
@@ -183,35 +183,6 @@ const AutomacaoVendas = () => {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              🚀 Pronto para transformar sua{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
-                operação de vendas?
-              </span>
-            </h2>
-            
-            <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-              Pare de perder tempo e dinheiro com processos manuais. Transforme sua operação de vendas em uma máquina de conversão com nossa solução completa de automação. Solicite uma demonstração personalizada hoje e descubra como podemos aumentar suas vendas nos próximos 90 dias.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-4 text-lg">
-                <Clock className="mr-2 h-5 w-5" />
-                Agendar Demonstração Agora
-              </Button>
-              <Button variant="outline" className="border-purple-200 text-purple-700 hover:bg-purple-50 px-8 py-4 text-lg">
-                <Target className="mr-2 h-5 w-5" />
-                Falar com Especialista
-              </Button>
             </div>
           </div>
         </div>
