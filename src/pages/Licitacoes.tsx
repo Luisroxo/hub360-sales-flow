@@ -1,10 +1,9 @@
 
-import { ArrowLeft, Building, CheckCircle, TrendingUp, Users, FileText, Shield } from "lucide-react";
+import { Building, CheckCircle, TrendingUp, Users, FileText, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Link } from "react-router-dom";
 
 const Licitacoes = () => {
   const features = [
@@ -52,16 +51,6 @@ const Licitacoes = () => {
         
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Back Button */}
-            <div className="mb-8">
-              <Link to="/">
-                <Button variant="ghost" className="text-slate-600 hover:text-slate-800">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Voltar para página inicial
-                </Button>
-              </Link>
-            </div>
-
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-8 border border-blue-200">
               <Building className="w-4 h-4" />
@@ -144,26 +133,6 @@ const Licitacoes = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Pronto para Participar das Maiores Licitações do País?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Entre em contato conosco e descubra como podemos conectar sua empresa ao maior mercado do Brasil
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-white text-blue-600 hover:bg-slate-50 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-lg"
-            >
-              Falar com especialista
-            </Button>
           </div>
         </div>
       </section>
