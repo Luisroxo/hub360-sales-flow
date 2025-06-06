@@ -73,17 +73,6 @@ const AutomacaoVendas = () => {
             <p className="text-lg text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
               Potencialize seu processo comercial com sistemas inteligentes que operam 24/7 para maximizar suas conversões
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-8 py-3 text-lg">
-                <Clock className="mr-2 h-5 w-5" />
-                Agendar Demonstração Agora
-              </Button>
-              <Button variant="outline" className="border-purple-200 text-purple-700 hover:bg-purple-50 px-8 py-3 text-lg">
-                <Target className="mr-2 h-5 w-5" />
-                Falar com Especialista
-              </Button>
-            </div>
           </div>
         </div>
       </section>
