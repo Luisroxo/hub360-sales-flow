@@ -1,14 +1,8 @@
 
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,10 +10,7 @@ export const Header = () => {
 
   const navItems = [
     { to: "/", label: "Início" },
-    { to: "/sobre", label: "Sobre" }
-  ];
-
-  const serviceItems = [
+    { to: "/sobre", label: "Sobre" },
     { to: "/licitacoes", label: "Licitações" },
     { to: "/ecommerce", label: "E-commerce" },
     { to: "/automacao-vendas", label: "Automação de Vendas" }
@@ -56,27 +47,6 @@ export const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
-            
-            {/* Services Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-slate-700 hover:text-purple-600 transition-colors font-medium relative group bg-transparent border-none outline-none">
-                Serviços
-                <ChevronDown className="ml-1 h-4 w-4" />
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 bg-white border border-slate-200 shadow-lg">
-                {serviceItems.map((service) => (
-                  <DropdownMenuItem key={service.to} asChild>
-                    <Link
-                      to={service.to}
-                      className="w-full px-4 py-3 text-slate-700 hover:text-purple-600 hover:bg-slate-50 transition-colors cursor-pointer"
-                    >
-                      {service.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
           </nav>
 
           {/* CTA Button */}
@@ -111,23 +81,6 @@ export const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              
-              {/* Mobile Services Section */}
-              <div className="py-2">
-                <div className="text-slate-700 font-medium mb-2">Serviços</div>
-                <div className="pl-4 space-y-2">
-                  {serviceItems.map((service) => (
-                    <Link
-                      key={service.to}
-                      to={service.to}
-                      className="block text-slate-600 hover:text-purple-600 transition-colors py-1"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {service.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
               
               <Button 
                 className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 mt-4"
