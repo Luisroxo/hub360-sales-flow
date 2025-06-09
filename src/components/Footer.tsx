@@ -14,7 +14,7 @@ export const Footer = () => {
             <a href="https://www.instagram.com/hub360plus/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-200 transition-colors">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="#" className="text-white hover:text-purple-200 transition-colors">
+            <a href="https://www.youtube.com/@HUB360PLUS" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-200 transition-colors">
               <Youtube className="h-5 w-5" />
             </a>
             <a href="#" className="text-white hover:text-purple-200 transition-colors">
