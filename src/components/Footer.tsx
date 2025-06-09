@@ -1,5 +1,6 @@
 
 import { Facebook, Instagram, Youtube, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -29,9 +30,9 @@ export const Footer = () => {
 
           {/* Terms and Privacy Links */}
           <div className="flex items-center space-x-4 text-sm">
-            <a href="#" className="text-white hover:text-purple-200 transition-colors">
+            <Link to="/termos-uso" className="text-white hover:text-purple-200 transition-colors">
               Termos de Uso
-            </a>
+            </Link>
             <span className="text-purple-300">|</span>
             <a href="#" className="text-white hover:text-purple-200 transition-colors">
               Política de Privacidade
