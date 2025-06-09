@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           {/* Social Media Icons */}
           <div className="flex items-center space-x-4">
-            <a href="#" className="text-white hover:text-purple-200 transition-colors">
+            <a href="https://www.facebook.com/hub360plus" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-200 transition-colors">
               <Facebook className="h-5 w-5" />
             </a>
             <a href="#" className="text-white hover:text-purple-200 transition-colors">
