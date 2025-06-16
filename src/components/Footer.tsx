@@ -25,7 +25,7 @@ export const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center text-sm text-purple-100">
-            Copyright © 2025 HUB360PLUS LTDA — Todos os Direitos Reservados — CNPJ 00.000.000/0001-00
+            Copyright © 2025 HUB360PLUS LTDA — Todos os Direitos Reservados
           </div>
 
           {/* Terms and Privacy Links */}
