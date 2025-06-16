@@ -32,13 +32,13 @@ const TermosUso = () => {
                 </p>
                 <div className="ml-6 mb-4">
                   <p className="mb-2">
-                    <strong>Licitações Públicas:</strong> Apoio completo em processos licitatórios, desde a identificação de oportunidades até a elaboração de propostas, visando ampliar a presença no setor público.
+                    <strong>Licitações Públicas:</strong> Apoio completo em processos licitatórios, desde a identificação de oportunidades até a elaboração de propostas, ampliando a presença no setor público.
                   </p>
                   <p className="mb-2">
-                    <strong>E-commerce:</strong> Desenvolvimento e gerenciamento de lojas virtuais e marketplaces, com foco em performance e automação de captação de clientes.
+                    <strong>E-commerce:</strong> Desenvolvimento e gerenciamento de lojas virtuais e marketplaces, com foco em desempenho e otimização de captação de clientes.
                   </p>
                   <p className="mb-4">
-                    <strong>Automação de Vendas:</strong> Implementação de sistemas que automatizam processos comerciais, como gestão de estoque, emissão de notas fiscais e integração com meios de pagamento.
+                    <strong>Automação de Vendas:</strong> Implementação de sistemas que automatizam processos comerciais, como gerenciamento de estoque, emissão de notas fiscais e integração com meios de pagamento.
                   </p>
                 </div>
                 <p className="mb-6">
@@ -47,7 +47,7 @@ const TermosUso = () => {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">2. FUNCIONALIDADE E RESPONSABILIDADES DOS SERVIÇOS</h2>
                 <p className="mb-4">
-                  <strong>2.1.</strong> A HUB360+ compromete-se a fornecer suporte técnico conforme os níveis de serviço acordados em proposta ou contrato.
+                  <strong>2.1.</strong> A HUB360+ compromete-se a fornecer suporte técnico conforme os níveis de serviço contratados.
                 </p>
                 <p className="mb-4">
                   <strong>2.2.</strong> O cliente é responsável por fornecer todas as informações e acessos necessários para a implementação correta dos serviços contratados.
@@ -61,16 +61,16 @@ const TermosUso = () => {
                   <strong>3.1.</strong> O cliente reconhece que:
                 </p>
                 <div className="ml-6 mb-4">
-                  <p className="mb-2">Limitações, falhas ou interrupções em plataformas utilizadas são de responsabilidade dos respectivos fornecedores;</p>
-                  <p className="mb-4">Para suporte técnico dessas plataformas, o cliente deverá contatar o provedor da ferramenta.</p>
+                  <p className="mb-2">Limitações, falhas ou interrupções nas plataformas utilizadas são de responsabilidade dos respectivos fornecedores;</p>
+                  <p className="mb-4">Para suporte técnico dessas plataformas, o cliente deverá entrar em contato com o provedor da ferramenta.</p>
                 </div>
                 <p className="mb-6">
-                  <strong>3.2.</strong> A HUB360+ proverá suporte apenas para configuração inicial, dentro do escopo contratado.
+                  <strong>3.2.</strong> A HUB360+ fornecerá suporte apenas para configuração inicial, dentro do escopo contratado.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">4. RESPONSABILIDADES DO CLIENTE</h2>
                 <p className="mb-4">
-                  <strong>4.1.</strong> Após confirmação de contratação e pagamento, o cliente deverá fornecer:
+                  <strong>4.1.</strong> Após a confirmação de contratação e pagamento, o cliente deverá fornecer:
                 </p>
                 <div className="ml-6 mb-4">
                   <p className="mb-2">Textos, imagens, processos e fluxos integrados;</p>
@@ -78,7 +78,7 @@ const TermosUso = () => {
                   <p className="mb-4">Informações corretas sobre usuários e canais de comunicação.</p>
                 </div>
                 <p className="mb-4">
-                  <strong>4.2.</strong> Atrasos ou omissões poderão postergar prazos sem penalidade à HUB360+.
+                  <strong>4.2.</strong> Atrasos ou omissões podem postergar prazos sem penalidade à HUB360+.
                 </p>
                 <p className="mb-6">
                   <strong>4.3.</strong> Informações incorretas ou omissões que prejudiquem o andamento dos serviços são de responsabilidade do cliente.
@@ -86,18 +86,18 @@ const TermosUso = () => {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">5. PROPRIEDADE INTELECTUAL</h2>
                 <p className="mb-4">
-                  <strong>5.1.</strong> Todos os materiais, conteúdos, logotipos, marcas e ferramentas são protegidos por leis de direitos autorais e propriedade intelectual.
+                  <strong>5.1.</strong> Todos os materiais, conteúdos, logotipos, marcas e ferramentas são protegidos pelas leis de direitos autorais e propriedade intelectual.
                 </p>
                 <p className="mb-4">
                   <strong>5.2.</strong> É proibido reproduzir, redistribuir ou usar o material sem autorização por escrito, exceto para uso pessoal não comercial, conforme licença de uso.
                 </p>
                 <p className="mb-6">
-                  <strong>5.3.</strong> Violações sujeitarão o responsável a medidas administrativas e judiciais, conforme a legislação vigente.
+                  <strong>5.3.</strong> Violações sujeitarão o responsável a medidas administrativas e judiciais, em conformidade com a legislação vigente.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">6. SUPORTE E ATENDIMENTO AO CLIENTE</h2>
                 <p className="mb-4">
-                  <strong>6.1.</strong> O suporte será prestado conforme níveis de serviço contratados.
+                  <strong>6.1.</strong> O suporte será fornecido de acordo com os níveis de serviço contratados.
                 </p>
                 <p className="mb-4">
                   <strong>6.2.</strong> Canais de contato:
@@ -112,13 +112,13 @@ const TermosUso = () => {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">7. CANCELAMENTO E REEMBOLSO</h2>
                 <p className="mb-4">
-                  <strong>7.1.</strong> O cliente pode solicitar cancelamento a qualquer momento, conforme condições contratuais.
+                  <strong>7.1.</strong> O cliente pode solicitar o cancelamento a qualquer momento, conforme condições contratuais.
                 </p>
                 <p className="mb-4">
-                  <strong>7.2.</strong> Em casos aplicáveis, será feito reembolso proporcional, descontadas taxas administrativas e custos já incorridos.
+                  <strong>7.2.</strong> Nos casos aplicáveis, será feito reembolso proporcional, descontadas taxas administrativas e custos já incorridos.
                 </p>
                 <p className="mb-6">
-                  <strong>7.3.</strong> Solicitações devem ser feitas por escrito e serão analisadas em até 30 dias.
+                  <strong>7.3.</strong> As solicitações deverão ser feitas por escrito e serão analisadas em até 30 dias.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">8. FORÇA MAIOR</h2>
@@ -134,19 +134,19 @@ const TermosUso = () => {
                   <strong>9.1.</strong> Podemos modificar, suspender ou descontinuar serviços, mediante notificação prévia ao cliente.
                 </p>
                 <p className="mb-6">
-                  <strong>9.2.</strong> O cliente poderá rescindir sem penalidade, caso as mudanças afetem o contrato, desde que haja aviso prévio escrito.
+                  <strong>9.2.</strong> O cliente poderá rescindir sem penalidade, caso as alterações afetem o contrato, desde que haja aviso prévio por escrito.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">10. RESCISÃO DO CONTRATO</h2>
                 <p className="mb-4">
-                  <strong>10.1.</strong> O contrato pode ser rescindido por qualquer parte mediante notificação escrita, nas seguintes situações:
+                  <strong>10.1.</strong> O contrato pode ser rescindido por qualquer parte mediante notificação por escrito, nas seguintes situações:
                 </p>
                 <div className="ml-6 mb-4">
                   <p className="mb-2">Descumprimento contratual, com prazo para correção;</p>
                   <p className="mb-4">Interesse de qualquer das partes, mediante aviso prévio de 30 dias.</p>
                 </div>
                 <p className="mb-4">
-                  <strong>10.2.</strong> Rescisão voluntária pelo cliente implicará multa rescisória de 50% do valor restante, salvo se for por inadimplência da HUB360+.
+                  <strong>10.2.</strong> A rescisão voluntária pelo cliente implicará multa rescisória de 50% do valor restante, salvo se for por inadimplência da HUB360+.
                 </p>
                 <p className="mb-4">
                   <strong>10.3.</strong> Em caso de descumprimento contratual pela HUB360+, o cliente não pagará multa e poderá receber reembolso proporcional pelos serviços não prestados.
@@ -181,7 +181,7 @@ const TermosUso = () => {
                   <strong>13.1.</strong> Estes Termos são regidos pelas leis da República Federativa do Brasil.
                 </p>
                 <p className="mb-4">
-                  <strong>13.2.</strong> Fica eleito o foro da Comarca de São Paulo/SP para resolução de eventuais litígios, com renúncia de qualquer outro foro.
+                  <strong>13.2.</strong> Fica eleito o foro da Comarca de São Paulo/SP para resolução de eventuais litígios, com renúncia a qualquer outro foro.
                 </p>
 
               </div>

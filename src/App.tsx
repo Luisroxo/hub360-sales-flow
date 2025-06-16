@@ -9,6 +9,7 @@ import Licitacoes from "./pages/Licitacoes";
 import Ecommerce from "./pages/Ecommerce";
 import AutomacaoVendas from "./pages/AutomacaoVendas";
 import Sobre from "./pages/Sobre";
+import TermosUso from "./pages/TermosUso";
 import NotFound from "./pages/NotFound";
 import BlogHome from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/ecommerce" element={<Ecommerce />} />
           <Route path="/automacao-vendas" element={<AutomacaoVendas />} />
           <Route path="/sobre" element={<Sobre />} />
+          <Route path="/termos-uso" element={<TermosUso />} />
           <Route path="/blog" element={<BlogHome />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/blog/tags/:tag" element={<BlogTags />} />
