@@ -34,9 +34,9 @@ export const Footer = () => {
               Termos de Uso
             </Link>
             <span className="text-purple-300">|</span>
-            <a href="#" className="text-white hover:text-purple-200 transition-colors">
+            <Link to="/politica-privacidade" className="text-white hover:text-purple-200 transition-colors">
               Política de Privacidade
-            </a>
+            </Link>
           </div>
         </div>
       </div>
