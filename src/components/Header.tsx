@@ -17,11 +17,28 @@ export const Header = () => {
   ];
 
   const handleChatClick = () => {
-    // Verifica se o chat do Odoo está disponível e abre
-    if (window.odoo && window.odoo.im_livechat && window.odoo.im_livechat.LivechatButton) {
-      window.odoo.im_livechat.LivechatButton.click();
+    // Tenta encontrar e clicar no botão do chat do Odoo
+    const chatButton = document.querySelector('.o_livechat_button') as HTMLElement;
+    if (chatButton) {
+      chatButton.click();
+      console.log('Chat do Odoo aberto via botão DOM');
     } else {
-      console.log('Chat do Odoo não está disponível ainda');
+      // Fallback: tenta usar a API do Odoo se disponível
+      if (window.odoo && window.odoo.im_livechat) {
+        try {
+          // Tenta diferentes métodos para abrir o chat
+          if (window.odoo.im_livechat.LivechatButton) {
+            window.odoo.im_livechat.LivechatButton.click();
+          } else if (typeof window.odoo.im_livechat.openChat === 'function') {
+            window.odoo.im_livechat.openChat();
+          }
+          console.log('Chat do Odoo aberto via API');
+        } catch (error) {
+          console.log('Erro ao abrir chat via API:', error);
+        }
+      } else {
+        console.log('Chat do Odoo ainda não está disponível. Aguarde alguns segundos e tente novamente.');
+      }
     }
   };
 
