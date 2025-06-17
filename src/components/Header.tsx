@@ -16,6 +16,15 @@ export const Header = () => {
     { to: "/automacao-vendas", label: "Automação de Vendas" }
   ];
 
+  const handleChatClick = () => {
+    // Verifica se o chat do Odoo está disponível e abre
+    if (window.odoo && window.odoo.im_livechat && window.odoo.im_livechat.LivechatButton) {
+      window.odoo.im_livechat.LivechatButton.click();
+    } else {
+      console.log('Chat do Odoo não está disponível ainda');
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-slate-200/50">
       <div className="container mx-auto px-4 py-4">
@@ -52,6 +61,7 @@ export const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex">
             <Button 
+              onClick={handleChatClick}
               className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-300"
             >
               Falar com especialista
@@ -83,6 +93,7 @@ export const Header = () => {
               ))}
               
               <Button 
+                onClick={handleChatClick}
                 className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 mt-4"
               >
                 Falar com especialista
