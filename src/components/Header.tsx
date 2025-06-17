@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,14 +23,9 @@ export const Header = () => {
       console.log('Chat do Odoo aberto via botão DOM');
     } else {
       // Fallback: tenta usar a API do Odoo se disponível
-      if (window.odoo && window.odoo.im_livechat) {
+      if (window.odoo && window.odoo.im_livechat && window.odoo.im_livechat.LivechatButton) {
         try {
-          // Tenta diferentes métodos para abrir o chat
-          if (window.odoo.im_livechat.LivechatButton) {
-            window.odoo.im_livechat.LivechatButton.click();
-          } else if (typeof window.odoo.im_livechat.openChat === 'function') {
-            window.odoo.im_livechat.openChat();
-          }
+          window.odoo.im_livechat.LivechatButton.click();
           console.log('Chat do Odoo aberto via API');
         } catch (error) {
           console.log('Erro ao abrir chat via API:', error);
