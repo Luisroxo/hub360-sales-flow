@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,24 +16,58 @@ export const Header = () => {
     { to: "/automacao-vendas", label: "Automação de Vendas" }
   ];
 
-  const handleChatClick = () => {
-    // Tenta encontrar e clicar no botão do chat do Odoo
-    const chatButton = document.querySelector('.o_livechat_button') as HTMLElement;
-    if (chatButton) {
-      chatButton.click();
-      console.log('Chat do Odoo aberto via botão DOM');
-    } else {
-      // Fallback: tenta usar a API do Odoo se disponível
-      if (window.odoo && window.odoo.im_livechat && window.odoo.im_livechat.LivechatButton) {
-        try {
-          window.odoo.im_livechat.LivechatButton.click();
-          console.log('Chat do Odoo aberto via API');
-        } catch (error) {
-          console.log('Erro ao abrir chat via API:', error);
+  const waitForOdooChat = (maxAttempts = 10, interval = 500) => {
+    return new Promise((resolve, reject) => {
+      let attempts = 0;
+      
+      const checkChat = () => {
+        attempts++;
+        console.log(`Tentativa ${attempts} de encontrar o chat do Odoo`);
+        
+        // Verifica se o botão do chat existe no DOM
+        const chatButton = document.querySelector('.o_livechat_button') as HTMLElement;
+        if (chatButton && chatButton.offsetParent !== null) {
+          console.log('Botão do chat encontrado no DOM');
+          resolve(chatButton);
+          return;
         }
-      } else {
-        console.log('Chat do Odoo ainda não está disponível. Aguarde alguns segundos e tente novamente.');
+        
+        // Verifica se a API do Odoo está disponível
+        if (window.odoo?.im_livechat?.LivechatButton) {
+          console.log('API do Odoo encontrada');
+          resolve(window.odoo.im_livechat.LivechatButton);
+          return;
+        }
+        
+        if (attempts >= maxAttempts) {
+          console.log('Máximo de tentativas atingido');
+          reject(new Error('Chat do Odoo não foi carregado'));
+          return;
+        }
+        
+        setTimeout(checkChat, interval);
+      };
+      
+      checkChat();
+    });
+  };
+
+  const handleChatClick = async () => {
+    console.log('Iniciando abertura do chat...');
+    
+    try {
+      const chatElement = await waitForOdooChat();
+      
+      if (chatElement instanceof HTMLElement) {
+        console.log('Clicando no botão DOM do chat');
+        chatElement.click();
+      } else if (chatElement && typeof chatElement.click === 'function') {
+        console.log('Usando API do Odoo para abrir chat');
+        chatElement.click();
       }
+    } catch (error) {
+      console.error('Erro ao tentar abrir o chat:', error);
+      alert('O chat ainda está carregando. Tente novamente em alguns segundos.');
     }
   };
 
