@@ -70,7 +70,7 @@ const Licitacoes = () => {
             </p>
 
             <p className="text-lg text-slate-600 mb-12 leading-relaxed max-w-4xl">
-              Na Hub360, somos especialistas em conectar sua empresa a esse universo promissor. Estruturamos sua participação de ponta a ponta: desde o mapeamento estratégico de editais e a preparação de propostas vencedoras até a gestão completa dos contratos. Deixe a burocracia conosco e concentre-se em entregar seus produtos e serviços para um cliente com grande escala e potencial de crescimento.
+              Na HUB360+, somos especialistas em conectar sua empresa a esse universo promissor. Estruturamos sua participação de ponta a ponta: desde o mapeamento estratégico de editais e a preparação de propostas vencedoras até a gestão completa dos contratos. Deixe a burocracia conosco e concentre-se em entregar seus produtos e serviços para um cliente com grande escala e potencial de crescimento.
             </p>
             
             <Button 
