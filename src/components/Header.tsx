@@ -17,7 +17,7 @@ export const Header = () => {
   ];
 
   const waitForOdooChat = (maxAttempts = 10, interval = 500) => {
-    return new Promise((resolve, reject) => {
+    return new Promise<HTMLElement | any>((resolve, reject) => {
       let attempts = 0;
       
       const checkChat = () => {
@@ -61,9 +61,9 @@ export const Header = () => {
       if (chatElement instanceof HTMLElement) {
         console.log('Clicando no botão DOM do chat');
         chatElement.click();
-      } else if (chatElement && typeof chatElement.click === 'function') {
+      } else if (chatElement && typeof (chatElement as any).click === 'function') {
         console.log('Usando API do Odoo para abrir chat');
-        chatElement.click();
+        (chatElement as any).click();
       }
     } catch (error) {
       console.error('Erro ao tentar abrir o chat:', error);
