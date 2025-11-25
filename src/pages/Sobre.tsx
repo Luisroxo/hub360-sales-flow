@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Target, Users, Zap, Heart, Lightbulb, Eye, CheckCircle, MessageSquare } from "lucide-react";
+import { Target, Users, Zap, Heart, Lightbulb, Eye, CheckCircle, MessageSquare, Handshake } from "lucide-react";
 
 const Sobre = () => {
   const services = [
@@ -26,29 +26,34 @@ const Sobre = () => {
 
   const values = [
     {
+      title: "Parceria Real",
+      description: "Compartilhamos riscos e resultados em todas as operações.",
+      icon: <Handshake className="h-6 w-6 text-neon-purple" />
+    },
+    {
       title: "Comprometimento com Resultados",
-      description: "Foco em entregar valor real e mensurável para nossos clientes.",
-      icon: <CheckCircle className="h-6 w-6 text-purple-600" />
+      description: "Foco em entregar valor real e mensurável para nossos parceiros.",
+      icon: <CheckCircle className="h-6 w-6 text-neon-purple" />
     },
     {
       title: "Inovação Contínua",
       description: "Busca constante por soluções criativas e eficazes.",
-      icon: <Lightbulb className="h-6 w-6 text-purple-600" />
+      icon: <Lightbulb className="h-6 w-6 text-neon-purple" />
     },
     {
       title: "Transparência",
       description: "Comunicação clara e honesta em todas as etapas do processo.",
-      icon: <MessageSquare className="h-6 w-6 text-purple-600" />
+      icon: <MessageSquare className="h-6 w-6 text-neon-purple" />
     },
     {
       title: "Colaboração",
       description: "Trabalho em equipe para alcançar objetivos comuns.",
-      icon: <Users className="h-6 w-6 text-purple-600" />
+      icon: <Users className="h-6 w-6 text-neon-purple" />
     },
     {
       title: "Excelência Operacional",
       description: "Padrões elevados de qualidade em tudo o que fazemos.",
-      icon: <Target className="h-6 w-6 text-purple-600" />
+      icon: <Target className="h-6 w-6 text-neon-purple" />
     }
   ];
 
@@ -62,18 +67,17 @@ const Sobre = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-neon-purple/10 text-neon-purple hover:bg-neon-purple/20 border-2 border-neon-purple/30">
-              Sobre Nós
+              Parceiros em Joint Venture
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Criamos canais de vendas que{" "}
+              Construímos parcerias comerciais que{" "}
               <span className="gradient-text-neon">
-                geram resultados reais
+                geram resultados compartilhados
               </span>
             </h1>
             <p className="text-xl text-foreground/70 leading-relaxed">
-              Na HUB360+, somos mais do que representantes comerciais. Atuamos como parceiros estratégicos, 
-              especializados em desenvolver e gerenciar canais de vendas sob medida para empresas que 
-              desejam crescer de forma consistente e inovadora.
+              Na HUB360+, atuamos como parceiros estratégicos através de Joint Ventures Operacionais, 
+              dividindo responsabilidades e resultados.
             </p>
           </div>
         </div>
@@ -93,8 +97,7 @@ const Sobre = () => {
                     Nossa Missão
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
-                    Capacitar microempreendedores e empresas a expandirem suas vendas no mundo digital, 
-                    conectando produtos ao público certo com estratégia, tecnologia e ação.
+                    Criar parcerias comerciais de sucesso, unindo expertise em vendas e tecnologia com produtos de nossos parceiros.
                   </p>
                 </CardContent>
               </Card>
@@ -108,8 +111,7 @@ const Sobre = () => {
                     Nossa Visão
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
-                    Ser reconhecida nacionalmente como a principal parceira estratégica na criação e 
-                    gestão de canais de vendas digitais, contribuindo para o sucesso sustentável de nossos clientes.
+                    Ser a principal parceira de Joint Venture para expansão comercial no Brasil.
                   </p>
                 </CardContent>
               </Card>
