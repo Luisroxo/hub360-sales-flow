@@ -80,26 +80,6 @@ export const JointVenture = () => {
             </div>
           </div>
 
-          {/* Revenue model highlights */}
-          <div className="bg-gradient-to-r from-neon-green/20 to-neon-cyan/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border-2 border-neon-green/30 mb-8">
-            <div className="grid md:grid-cols-2 gap-6 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-4">
-                <div className="text-4xl">💰</div>
-                <div>
-                  <p className="text-lg font-semibold text-foreground">Licenças (Kommo, Bling)</p>
-                  <p className="text-neon-green font-bold">Receita exclusiva HUB360+</p>
-                </div>
-              </div>
-              <div className="flex items-center justify-center md:justify-start gap-4">
-                <div className="text-4xl">🤝</div>
-                <div>
-                  <p className="text-lg font-semibold text-foreground">Operações JV</p>
-                  <p className="text-neon-cyan font-bold">Revenue Share (fixo + variável)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* CTA */}
           <div className="text-center">
             <Button variant="neon" size="lg" className="text-lg px-8 py-6">
