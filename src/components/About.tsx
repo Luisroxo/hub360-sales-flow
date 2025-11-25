@@ -9,9 +9,9 @@ export const About = () => {
   ];
 
   const differentials = [
-    { text: "Não apenas divulgamos", highlight: "Vendemos" },
-    { text: "Não apenas planejamos", highlight: "Executamos" },
-    { text: "Não apenas prometemos", highlight: "Geramos resultado" }
+    { text: "Não apenas vendemos para você", highlight: "Vendemos COM você" },
+    { text: "Não apenas executamos", highlight: "Compartilhamos o risco" },
+    { text: "Não apenas geramos resultado", highlight: "Dividimos o sucesso" }
   ];
 
   const neonIcons = [

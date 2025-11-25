@@ -16,20 +16,32 @@ export const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-neon-purple/10 text-neon-purple px-6 py-3 rounded-full text-sm font-medium mb-8 border-2 border-neon-purple/30 backdrop-blur-sm">
               <div className="w-2 h-2 bg-neon-purple rounded-full animate-pulse" />
-              Parceiros comerciais especializados
+              🤝 Joint Venture Operacional
             </div>
             
             <h1 className="text-5xl md:text-8xl font-extrabold text-foreground mb-8 tracking-tight leading-tight">
-              Transformamos{" "}
+              Não vendemos para você —{" "}
               <span className="gradient-text-neon">
-                oportunidades
+                vendemos COM você
               </span>
-              {" "}em resultados reais
             </h1>
             
             <p className="text-xl md:text-2xl text-foreground/80 mb-12 leading-relaxed font-light">
-              Somos mais do que representantes comerciais. Somos parceiros estratégicos que assumem a responsabilidade de vender seus produtos e serviços.
+              Criamos juntos um novo braço comercial. Parceria real, responsabilidades compartilhadas, resultados divididos.
             </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#jv">
+                <button className="px-8 py-4 bg-gradient-to-r from-neon-purple to-neon-blue text-white font-semibold rounded-full hover:scale-105 transition-transform duration-300 neon-glow-purple">
+                  Quero ser parceiro JV
+                </button>
+              </a>
+              <a href="#como-funciona">
+                <button className="px-8 py-4 bg-transparent border-2 border-neon-purple text-neon-purple font-semibold rounded-full hover:bg-neon-purple/10 transition-all duration-300">
+                  Como funciona
+                </button>
+              </a>
+            </div>
           </div>
           
           {/* Stats with Animation */}
