@@ -8,7 +8,7 @@ export const Services = () => {
     {
       icon: Building,
       title: "Licitações",
-      description: "Estruturamos a participação de empresas no setor público, mapeando oportunidades, preparando propostas e gerenciando contratos.",
+      description: "Estruturamos a participação de empresas no setor público, mapeando oportunidades, preparando propostas e gerenciando contratos. Receita compartilhada nas vendas B2G.",
       features: ["Mapeamento de oportunidades", "Preparação de propostas", "Gerenciamento de contratos"],
       gradient: "from-blue-500 to-blue-600",
       link: "/licitacoes"
@@ -16,7 +16,7 @@ export const Services = () => {
     {
       icon: ShoppingCart,
       title: "E-commerce",
-      description: "Desenvolvemos e operamos canais de vendas online, desde lojas virtuais até marketplaces, com estratégias de posicionamento e performance.",
+      description: "Desenvolvemos e operamos canais de vendas online, desde lojas virtuais até marketplaces, com estratégias de posicionamento e performance. Operamos juntos lojas e marketplaces — resultados divididos.",
       features: ["Lojas virtuais", "Marketplaces", "Estratégias de performance"],
       gradient: "from-purple-500 to-purple-600",
       link: "/ecommerce"
@@ -24,7 +24,7 @@ export const Services = () => {
     {
       icon: Cog,
       title: "Automação de Vendas",
-      description: "Implantamos sistemas inteligentes, como CRMs, chatbots e fluxos automatizados, para transformar leads em vendas com agilidade e escala.",
+      description: "Implantamos sistemas inteligentes, como CRMs, chatbots e fluxos automatizados, para transformar leads em vendas com agilidade e escala. CRM e ERP adquiridos via HUB360+ (revenda). Operação entra no revenue share.",
       features: ["CRMs inteligentes", "Chatbots", "Fluxos automatizados"],
       gradient: "from-emerald-500 to-emerald-600",
       link: "/automacao-vendas"
@@ -45,13 +45,13 @@ export const Services = () => {
             Nossos Serviços
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 tracking-tight">
-            Criadores de Canais de{" "}
+            Como Atuamos na{" "}
             <span className="gradient-text-neon">
-              Vendas
+              Joint Venture
             </span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            Nosso foco está em construir estruturas comerciais sólidas e eficazes. Atuamos diretamente onde as oportunidades acontecem.
+            Construímos juntos estruturas comerciais compartilhadas. Você entra com o produto, nós com a operação e inteligência comercial.
           </p>
         </div>
 
