@@ -1,194 +1,246 @@
-
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { MessageCircle, FileText, Users, Briefcase, DollarSign, Shield, Lock, Clock, Scale } from "lucide-react";
 
 const TermosUso = () => {
+  const sections = [
+    {
+      icon: FileText,
+      number: "1",
+      title: "INTRODUÇÃO",
+      content: (
+        <>
+          <p className="text-foreground/70 mb-4">
+            Bem-vindo à HUB360+. Estes Termos de Uso regulam a relação de parceria através de Joint Venture Operacional 
+            entre a HUB360PLUS LTDA e seus parceiros comerciais. Ao firmar parceria conosco, você concorda com estes termos.
+          </p>
+          <p className="text-sm text-foreground/50">
+            Última atualização: 02/12/2025
+          </p>
+        </>
+      )
+    },
+    {
+      icon: Users,
+      number: "2",
+      title: "DEFINIÇÕES",
+      content: (
+        <ul className="space-y-3 text-foreground/70">
+          <li><strong className="text-neon-purple">Joint Venture Operacional:</strong> Parceria comercial baseada em cooperação mútua, divisão de responsabilidades e compartilhamento de resultados</li>
+          <li><strong className="text-neon-purple">Parceiro:</strong> Empresa ou pessoa jurídica que firma acordo de JV com a HUB360+</li>
+          <li><strong className="text-neon-purple">Operação Compartilhada:</strong> Gestão conjunta de canais comerciais, dividindo custos, riscos e lucros</li>
+          <li><strong className="text-neon-purple">Revenue Share:</strong> Modelo de remuneração baseado em divisão proporcional dos resultados</li>
+        </ul>
+      )
+    },
+    {
+      icon: Briefcase,
+      number: "3",
+      title: "MODELO DE PARCERIA",
+      content: (
+        <ul className="space-y-3 text-foreground/70">
+          <li><strong className="text-foreground">3.1.</strong> A HUB360+ atua como parceira estratégica, não como prestadora de serviços convencional</li>
+          <li><strong className="text-foreground">3.2.</strong> Responsabilidades são divididas conforme contrato específico de cada JV</li>
+          <li><strong className="text-foreground">3.3.</strong> Resultados (lucros e prejuízos) são compartilhados proporcionalmente</li>
+          <li><strong className="text-foreground">3.4.</strong> Cada parceria possui governança e KPIs específicos</li>
+        </ul>
+      )
+    },
+    {
+      icon: Briefcase,
+      number: "4",
+      title: "RESPONSABILIDADES DA HUB360+",
+      content: (
+        <ul className="space-y-2 text-foreground/70">
+          <li className="flex items-start gap-2">
+            <span className="text-neon-green">•</span>
+            Gestão comercial e marketing
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-neon-green">•</span>
+            Tecnologia e infraestrutura digital (CRM, ERP, automações)
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-neon-green">•</span>
+            Estratégia para canais de vendas (licitações, e-commerce, B2B)
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-neon-green">•</span>
+            Relatórios de performance e dashboards
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-neon-green">•</span>
+            Operação e execução das vendas
+          </li>
+        </ul>
+      )
+    },
+    {
+      icon: Users,
+      number: "5",
+      title: "RESPONSABILIDADES DO PARCEIRO",
+      content: (
+        <ul className="space-y-2 text-foreground/70">
+          <li className="flex items-start gap-2">
+            <span className="text-neon-blue">•</span>
+            Fornecimento de produtos/serviços
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-neon-blue">•</span>
+            Marca e identidade
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-neon-blue">•</span>
+            Suporte técnico e pós-venda
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-neon-blue">•</span>
+            Produção e entrega
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-neon-blue">•</span>
+            Compartilhamento de know-how técnico
+          </li>
+        </ul>
+      )
+    },
+    {
+      icon: DollarSign,
+      number: "6",
+      title: "MODELO FINANCEIRO",
+      content: (
+        <ul className="space-y-3 text-foreground/70">
+          <li><strong className="text-foreground">6.1.</strong> Revenue Share: parte fixa mensal + percentual variável sobre resultados</li>
+          <li><strong className="text-foreground">6.2.</strong> Custos operacionais são rateados conforme acordo</li>
+          <li><strong className="text-foreground">6.3.</strong> Transparência total através de relatórios mensais</li>
+          <li><strong className="text-foreground">6.4.</strong> Revenda de licenças de software (Kommo, Bling) é receita exclusiva da HUB360+</li>
+        </ul>
+      )
+    },
+    {
+      icon: Shield,
+      number: "7",
+      title: "PROPRIEDADE INTELECTUAL",
+      content: (
+        <ul className="space-y-3 text-foreground/70">
+          <li><strong className="text-foreground">7.1.</strong> Cada parte mantém direitos sobre suas marcas e propriedades</li>
+          <li><strong className="text-foreground">7.2.</strong> Materiais criados em conjunto são de propriedade compartilhada</li>
+          <li><strong className="text-foreground">7.3.</strong> Uso de marcas de terceiros mediante autorização</li>
+        </ul>
+      )
+    },
+    {
+      icon: Lock,
+      number: "8",
+      title: "CONFIDENCIALIDADE",
+      content: (
+        <p className="text-foreground/70">
+          Todas as informações comerciais, estratégicas e operacionais são confidenciais e protegidas por acordo de sigilo.
+        </p>
+      )
+    },
+    {
+      icon: Clock,
+      number: "9",
+      title: "VIGÊNCIA E RESCISÃO",
+      content: (
+        <ul className="space-y-3 text-foreground/70">
+          <li><strong className="text-foreground">9.1.</strong> Contratos de JV possuem prazo determinado, renovável</li>
+          <li><strong className="text-foreground">9.2.</strong> Rescisão antecipada mediante aviso prévio conforme contrato</li>
+          <li><strong className="text-foreground">9.3.</strong> Direitos e obrigações cessam após período de transição</li>
+        </ul>
+      )
+    },
+    {
+      icon: Scale,
+      number: "10",
+      title: "DISPOSIÇÕES GERAIS",
+      content: (
+        <ul className="space-y-3 text-foreground/70">
+          <li><strong className="text-foreground">10.1.</strong> Foro: São Paulo/SP</li>
+          <li><strong className="text-foreground">10.2.</strong> Modificações nestes termos serão comunicadas com antecedência</li>
+          <li><strong className="text-foreground">10.3.</strong> Dúvidas: contato através dos canais oficiais</li>
+        </ul>
+      )
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Header />
       
-      <div className="pt-32 pb-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Badge className="mb-6 bg-purple-100 text-purple-700 hover:bg-purple-200">
-                Termos de Uso
-              </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Termos de Uso
-              </h1>
-              <p className="text-xl text-gray-600">
-                Condições gerais de uso dos serviços da HUB360+
-              </p>
-            </div>
-
-            <div className="prose prose-lg max-w-none">
-              <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">1. OBJETO DO TERMO</h2>
-                <p className="mb-4">
-                  <strong>1.1.</strong> A HUB360+ é especializada na criação e gestão de canais de vendas, oferecendo soluções abrangentes que incluem:
-                </p>
-                <div className="ml-6 mb-4">
-                  <p className="mb-2">
-                    <strong>Licitações Públicas:</strong> Apoio completo em processos licitatórios, desde a identificação de oportunidades até a elaboração de propostas, ampliando a presença no setor público.
-                  </p>
-                  <p className="mb-2">
-                    <strong>E-commerce:</strong> Desenvolvimento e gerenciamento de lojas virtuais e marketplaces, com foco em desempenho e otimização de captação de clientes.
-                  </p>
-                  <p className="mb-4">
-                    <strong>Automação de Vendas:</strong> Implementação de sistemas que automatizam processos comerciais, como gerenciamento de estoque, emissão de notas fiscais e integração com meios de pagamento.
-                  </p>
-                </div>
-                <p className="mb-6">
-                  <strong>1.2.</strong> Também disponibilizamos consultoria estratégica, treinamento e suporte técnico conforme acordado em contrato específico.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">2. FUNCIONALIDADE E RESPONSABILIDADES DOS SERVIÇOS</h2>
-                <p className="mb-4">
-                  <strong>2.1.</strong> A HUB360+ compromete-se a fornecer suporte técnico conforme os níveis de serviço contratados.
-                </p>
-                <p className="mb-4">
-                  <strong>2.2.</strong> O cliente é responsável por fornecer todas as informações e acessos necessários para a implementação correta dos serviços contratados.
-                </p>
-                <p className="mb-6">
-                  <strong>2.3.</strong> A HUB360+ não se responsabiliza por limitações técnicas, falhas ou interrupções em serviços causadas por fatores externos ou plataformas de terceiros integradas.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">3. CIÊNCIA PELO CLIENTE</h2>
-                <p className="mb-4">
-                  <strong>3.1.</strong> O cliente reconhece que:
-                </p>
-                <div className="ml-6 mb-4">
-                  <p className="mb-2">Limitações, falhas ou interrupções nas plataformas utilizadas são de responsabilidade dos respectivos fornecedores;</p>
-                  <p className="mb-4">Para suporte técnico dessas plataformas, o cliente deverá entrar em contato com o provedor da ferramenta.</p>
-                </div>
-                <p className="mb-6">
-                  <strong>3.2.</strong> A HUB360+ fornecerá suporte apenas para configuração inicial, dentro do escopo contratado.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">4. RESPONSABILIDADES DO CLIENTE</h2>
-                <p className="mb-4">
-                  <strong>4.1.</strong> Após a confirmação de contratação e pagamento, o cliente deverá fornecer:
-                </p>
-                <div className="ml-6 mb-4">
-                  <p className="mb-2">Textos, imagens, processos e fluxos integrados;</p>
-                  <p className="mb-2">Logins, senhas ou autorização para criação de contas;</p>
-                  <p className="mb-4">Informações corretas sobre usuários e canais de comunicação.</p>
-                </div>
-                <p className="mb-4">
-                  <strong>4.2.</strong> Atrasos ou omissões podem postergar prazos sem penalidade à HUB360+.
-                </p>
-                <p className="mb-6">
-                  <strong>4.3.</strong> Informações incorretas ou omissões que prejudiquem o andamento dos serviços são de responsabilidade do cliente.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">5. PROPRIEDADE INTELECTUAL</h2>
-                <p className="mb-4">
-                  <strong>5.1.</strong> Todos os materiais, conteúdos, logotipos, marcas e ferramentas são protegidos pelas leis de direitos autorais e propriedade intelectual.
-                </p>
-                <p className="mb-4">
-                  <strong>5.2.</strong> É proibido reproduzir, redistribuir ou usar o material sem autorização por escrito, exceto para uso pessoal não comercial, conforme licença de uso.
-                </p>
-                <p className="mb-6">
-                  <strong>5.3.</strong> Violações sujeitarão o responsável a medidas administrativas e judiciais, em conformidade com a legislação vigente.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">6. SUPORTE E ATENDIMENTO AO CLIENTE</h2>
-                <p className="mb-4">
-                  <strong>6.1.</strong> O suporte será fornecido de acordo com os níveis de serviço contratados.
-                </p>
-                <p className="mb-4">
-                  <strong>6.2.</strong> Canais de contato:
-                </p>
-                <div className="ml-6 mb-4">
-                  <p className="mb-2">WhatsApp: (11) 99999-9999</p>
-                  <p className="mb-4">E-mail: contato@hub360mais.com.br</p>
-                </div>
-                <p className="mb-6">
-                  <strong>6.3.</strong> Os tempos de resposta variam conforme a complexidade, mas a HUB360+ atenderá dentro dos prazos acordados.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">7. CANCELAMENTO E REEMBOLSO</h2>
-                <p className="mb-4">
-                  <strong>7.1.</strong> O cliente pode solicitar o cancelamento a qualquer momento, conforme condições contratuais.
-                </p>
-                <p className="mb-4">
-                  <strong>7.2.</strong> Nos casos aplicáveis, será feito reembolso proporcional, descontadas taxas administrativas e custos já incorridos.
-                </p>
-                <p className="mb-6">
-                  <strong>7.3.</strong> As solicitações deverão ser feitas por escrito e serão analisadas em até 30 dias.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">8. FORÇA MAIOR</h2>
-                <p className="mb-4">
-                  <strong>8.1.</strong> A HUB360+ não será responsável por interrupções ou falhas causadas por eventos externos além de seu controle.
-                </p>
-                <p className="mb-6">
-                  <strong>8.2.</strong> Em caso de força maior, notificaremos o cliente e tomaremos medidas cabíveis para mitigar impactos.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">9. MODIFICAÇÃO DOS SERVIÇOS</h2>
-                <p className="mb-4">
-                  <strong>9.1.</strong> Podemos modificar, suspender ou descontinuar serviços, mediante notificação prévia ao cliente.
-                </p>
-                <p className="mb-6">
-                  <strong>9.2.</strong> O cliente poderá rescindir sem penalidade, caso as alterações afetem o contrato, desde que haja aviso prévio por escrito.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">10. RESCISÃO DO CONTRATO</h2>
-                <p className="mb-4">
-                  <strong>10.1.</strong> O contrato pode ser rescindido por qualquer parte mediante notificação por escrito, nas seguintes situações:
-                </p>
-                <div className="ml-6 mb-4">
-                  <p className="mb-2">Descumprimento contratual, com prazo para correção;</p>
-                  <p className="mb-4">Interesse de qualquer das partes, mediante aviso prévio de 30 dias.</p>
-                </div>
-                <p className="mb-4">
-                  <strong>10.2.</strong> A rescisão voluntária pelo cliente implicará multa rescisória de 50% do valor restante, salvo se for por inadimplência da HUB360+.
-                </p>
-                <p className="mb-4">
-                  <strong>10.3.</strong> Em caso de descumprimento contratual pela HUB360+, o cliente não pagará multa e poderá receber reembolso proporcional pelos serviços não prestados.
-                </p>
-                <p className="mb-6">
-                  <strong>10.4.</strong> Caso a rescisão seja por descumprimento do cliente, ele ficará responsável pelo pagamento de valores devidos até a data de rescisão, incluindo custos incorridos.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">11. INDENIZAÇÃO</h2>
-                <p className="mb-4">
-                  <strong>11.1.</strong> O cliente concorda em indenizar e isentar a HUB360+ por quaisquer reivindicações, perdas ou danos resultantes de:
-                </p>
-                <div className="ml-6 mb-6">
-                  <p className="mb-2">Uso indevido dos serviços ou violação destes Termos;</p>
-                  <p className="mb-2">Informações incorretas ou incompletas fornecidas pelo cliente;</p>
-                  <p className="mb-4">Ações autorizadas por terceiros indicados pelo cliente.</p>
-                </div>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">12. DISPOSIÇÕES GERAIS</h2>
-                <p className="mb-4">
-                  <strong>12.1.</strong> Estes Termos constituem o acordo integral entre as partes, prevalecendo sobre entendimentos anteriores.
-                </p>
-                <p className="mb-4">
-                  <strong>12.2.</strong> Se alguma cláusula for considerada inválida, as demais permanecerão em vigor.
-                </p>
-                <p className="mb-6">
-                  <strong>12.3.</strong> A ausência de exercício de qualquer direito previsto nestes Termos não será considerada renúncia de direitos.
-                </p>
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">13. LEI APLICÁVEL E FORO</h2>
-                <p className="mb-4">
-                  <strong>13.1.</strong> Estes Termos são regidos pelas leis da República Federativa do Brasil.
-                </p>
-                <p className="mb-4">
-                  <strong>13.2.</strong> Fica eleito o foro da Comarca de São Paulo/SP para resolução de eventuais litígios, com renúncia a qualquer outro foro.
-                </p>
-
-              </div>
-            </div>
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 relative overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-purple/20 rounded-full filter blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue/20 rounded-full filter blur-[120px]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-6 bg-neon-purple/20 text-neon-purple border-neon-purple/30 hover:bg-neon-purple/30">
+              Termos e Condições
+            </Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-neon-purple via-neon-blue to-neon-cyan bg-clip-text text-transparent">
+                Termos de Uso e Parceria
+              </span>
+            </h1>
+            <p className="text-xl text-foreground/70">
+              Conheça as regras e condições que regem nossa relação de Joint Venture Operacional
+            </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Content Sections */}
+      <section className="pb-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-6">
+            {sections.map((section, index) => (
+              <Card 
+                key={index} 
+                className="border border-neon-purple/20 bg-background/50 backdrop-blur-sm hover:border-neon-purple/40 transition-all duration-300"
+              >
+                <CardContent className="p-6 md:p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-neon-purple/20 to-neon-blue/20 flex items-center justify-center border border-neon-purple/30">
+                      <section.icon className="h-6 w-6 text-neon-purple" />
+                    </div>
+                    <div className="flex-1">
+                      <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+                        {section.number}. {section.title}
+                      </h2>
+                      {section.content}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+
+            {/* CTA Section */}
+            <Card className="border-2 border-neon-green/30 bg-gradient-to-br from-neon-green/5 to-neon-cyan/5 backdrop-blur-sm">
+              <CardContent className="p-8 md:p-12 text-center">
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  Ficou com alguma dúvida?
+                </h3>
+                <p className="text-foreground/70 mb-6">
+                  Nossa equipe está pronta para esclarecer qualquer questão sobre os termos de parceria.
+                </p>
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-neon-purple to-neon-blue hover:opacity-90 text-white"
+                  onClick={() => window.open('https://hub360.odoo.com/contactus', '_blank')}
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Falar com especialista
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
