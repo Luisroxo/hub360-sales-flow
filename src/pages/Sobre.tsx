@@ -3,7 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Target, Users, Zap, Heart, Lightbulb, Eye, CheckCircle, MessageSquare, Handshake } from "lucide-react";
+import { Target, Users, Zap, Heart, Lightbulb, Eye, CheckCircle, MessageSquare, Handshake, Check, Calendar, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Sobre = () => {
   const services = [
@@ -76,8 +77,8 @@ const Sobre = () => {
               </span>
             </h1>
             <p className="text-xl text-foreground/70 leading-relaxed">
-              Na HUB360+, atuamos como parceiros estratégicos através de Joint Ventures Operacionais, 
-              dividindo responsabilidades e resultados.
+              Não vendemos para você — vendemos COM você. Atuamos como parceiros estratégicos através de Joint Ventures Operacionais, 
+              dividindo responsabilidades, riscos e resultados.
             </p>
           </div>
         </div>
@@ -187,6 +188,74 @@ const Sobre = () => {
                 );
               })}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA - Como Funciona a Parceria JV */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full filter blur-[120px]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-2 border-neon-purple/30 bg-gradient-to-br from-neon-purple/5 to-neon-blue/5 backdrop-blur-sm">
+              <CardContent className="p-8 md:p-12">
+                <div className="text-center mb-8">
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    Como Funciona a Parceria JV?
+                  </h2>
+                  <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+                    Nosso modelo de Joint Venture é estruturado para criar crescimento sustentável e compartilhado. Definimos juntos:
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
+                  {[
+                    "Divisão de responsabilidades operacionais",
+                    "Estrutura de investimentos e custos",
+                    "Modelo de revenue share (parte fixa + variável)",
+                    "Metas, KPIs e governança da parceria",
+                    "Diferenciais: representante comercial/consultoria vs operação compartilhada"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-neon-green/20 flex items-center justify-center">
+                        <Check className="h-4 w-4 text-neon-green" />
+                      </div>
+                      <span className="text-foreground/80">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="text-center">
+                  <p className="text-lg text-foreground/70 mb-6">
+                    Quer entender como isso funciona na prática para o seu negócio?
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+                    <Button 
+                      size="lg" 
+                      className="bg-gradient-to-r from-neon-purple to-neon-blue hover:opacity-90 text-white"
+                      onClick={() => window.open('https://calendly.com/hub360', '_blank')}
+                    >
+                      <Calendar className="mr-2 h-5 w-5" />
+                      Agendar reunião com nosso time
+                    </Button>
+                    <Button 
+                      size="lg" 
+                      variant="outline"
+                      className="border-neon-purple/50 text-neon-purple hover:bg-neon-purple/10"
+                      onClick={() => window.open('https://hub360.odoo.com/contactus', '_blank')}
+                    >
+                      <MessageCircle className="mr-2 h-5 w-5" />
+                      Falar com especialista
+                    </Button>
+                  </div>
+                  
+                  <p className="text-sm text-foreground/50">
+                    Em 30 minutos, mostramos como estruturar uma JV comercial para sua empresa.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
