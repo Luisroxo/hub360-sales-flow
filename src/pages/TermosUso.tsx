@@ -116,7 +116,7 @@ const TermosUso = () => {
           <li><strong className="text-foreground">6.1.</strong> Revenue Share: parte fixa mensal + percentual variável sobre resultados</li>
           <li><strong className="text-foreground">6.2.</strong> Custos operacionais são rateados conforme acordo</li>
           <li><strong className="text-foreground">6.3.</strong> Transparência total através de relatórios mensais</li>
-          <li><strong className="text-foreground">6.4.</strong> Revenda de licenças de software (Kommo, Bling) é receita exclusiva da HUB360+</li>
+          <li><strong className="text-foreground">6.4.</strong> Licenças de software (CRM Kommo, ERP Bling): A HUB360+ é revendedora oficial. O parceiro adquire as licenças através da HUB360+, garantindo acesso às ferramentas essenciais para a operação da Joint Venture.</li>
         </ul>
       )
     },
