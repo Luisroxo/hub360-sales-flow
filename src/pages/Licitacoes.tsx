@@ -70,7 +70,7 @@ const Licitacoes = () => {
             </p>
 
             <p className="text-lg text-foreground/70 mb-12 leading-relaxed max-w-4xl">
-              Na HUB360+, somos especialistas em conectar sua empresa a esse universo promissor. Estruturamos sua participação de ponta a ponta: desde o mapeamento estratégico de editais e a preparação de propostas vencedoras até a gestão completa dos contratos. Deixe a burocracia conosco e concentre-se em entregar seus produtos e serviços para um cliente com grande escala e potencial de crescimento.
+              <strong className="text-neon-cyan">Estruturamos parcerias para atuação no setor público, dividindo responsabilidades e resultados.</strong> Não apenas preparamos licitações — operamos juntos para vencer. Deixe a burocracia conosco e concentre-se em entregar seus produtos e serviços para um cliente com grande escala e potencial de crescimento.
             </p>
             
             <Button 
@@ -136,6 +136,79 @@ const Licitacoes = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Como Funciona - JV Model Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/5 rounded-full filter blur-[120px]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Modelo <span className="text-neon-cyan">Joint Venture</span> em Licitações
+              </h2>
+              <p className="text-xl text-foreground/70">
+                Uma parceria estruturada para maximizar suas chances de vitória
+              </p>
+            </div>
+
+            <div className="p-8 rounded-2xl border-2 border-neon-cyan/30 bg-card/30 backdrop-blur-sm">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-neon-cyan flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 text-lg">
+                    <strong className="text-foreground">HUB360+ assume</strong> mapeamento, preparação e gestão de propostas
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-neon-cyan flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 text-lg">
+                    <strong className="text-foreground">Parceiro fornece</strong> produto/serviço e know-how técnico
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-neon-cyan flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 text-lg">
+                    <strong className="text-foreground">Resultados</strong> (vitórias em licitações) são compartilhados proporcionalmente
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-neon-cyan flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 text-lg">
+                    <strong className="text-foreground">Transparência total</strong> através de dashboards de acompanhamento
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue/10 rounded-full filter blur-[120px]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="p-10 rounded-2xl border-2 border-neon-blue/30 bg-gradient-to-br from-neon-blue/5 to-neon-cyan/5 backdrop-blur-sm">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Pronto para Vencer Licitações em <span className="text-neon-blue">Parceria</span>?
+              </h2>
+              <p className="text-xl text-foreground/70 mb-8">
+                Agende uma reunião e entenda como estruturar uma JV focada em vendas públicas.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" variant="neon">
+                  Agendar reunião
+                </Button>
+                <Button size="lg" variant="outline" className="border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan/10">
+                  Saiba mais sobre JV
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
