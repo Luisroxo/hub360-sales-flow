@@ -1,5 +1,5 @@
 
-import { Search, Target, TrendingUp, BarChart3, Users, Settings } from "lucide-react";
+import { Search, Target, TrendingUp, BarChart3, Users, Settings, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
@@ -70,7 +70,7 @@ const Ecommerce = () => {
             </h1>
             
             <p className="text-xl text-foreground/70 mb-12 leading-relaxed max-w-4xl">
-              Na <strong>HUB360+</strong>, acreditamos que um e-commerce de sucesso vai além de campanhas publicitárias. Oferecemos uma abordagem integrada que combina estratégia, gestão eficiente e tecnologia de ponta para transformar desafios em crescimento sustentável.
+              <strong className="text-neon-purple">Criamos e operamos juntos canais de vendas online.</strong> Não apenas montamos sua loja — vendemos com você, dividindo estratégias, custos e resultados. Oferecemos uma abordagem integrada que combina estratégia, gestão eficiente e tecnologia de ponta para transformar desafios em crescimento sustentável.
             </p>
             
             <Button 
@@ -114,18 +114,75 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      {/* Partnership Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-neon-purple/10 text-neon-purple px-6 py-3 rounded-full text-sm font-medium mb-8 border-2 border-neon-purple/30">
-              <Settings className="w-4 h-4" />
-              Parceria Estratégica
+      {/* Como Funciona - JV Model Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-purple/5 rounded-full filter blur-[120px]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Modelo <span className="text-neon-purple">Joint Venture</span> em E-commerce
+              </h2>
+              <p className="text-xl text-foreground/70">
+                Uma parceria estruturada para escalar suas vendas online
+              </p>
             </div>
-            
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              A HUB360+ é o parceiro ideal para levar seu e-commerce ao próximo nível.
-            </h2>
+
+            <div className="p-8 rounded-2xl border-2 border-neon-purple/30 bg-card/30 backdrop-blur-sm">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-neon-purple flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 text-lg">
+                    <strong className="text-foreground">HUB360+ assume</strong> criação, operação e marketing das lojas/marketplaces
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-neon-purple flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 text-lg">
+                    <strong className="text-foreground">Parceiro fornece</strong> produtos e suporte pós-venda
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-neon-purple flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 text-lg">
+                    <strong className="text-foreground">Investimentos</strong> em anúncios e ferramentas são compartilhados
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-neon-purple flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/80 text-lg">
+                    <strong className="text-foreground">Receitas de vendas online</strong> são divididas conforme revenue share acordado
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-pink/10 rounded-full filter blur-[120px]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="p-10 rounded-2xl border-2 border-neon-purple/30 bg-gradient-to-br from-neon-purple/5 to-neon-pink/5 backdrop-blur-sm">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Pronto para Escalar Vendas Online em <span className="text-neon-purple">Parceria</span>?
+              </h2>
+              <p className="text-xl text-foreground/70 mb-8">
+                Agende uma reunião e descubra como estruturar uma JV focada em e-commerce e marketplaces.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" variant="neon">
+                  Agendar reunião
+                </Button>
+                <Button size="lg" variant="outline" className="border-neon-purple/50 text-neon-purple hover:bg-neon-purple/10">
+                  Saiba mais sobre JV
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
