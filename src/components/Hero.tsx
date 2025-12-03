@@ -4,17 +4,12 @@ import { AnimatedStat } from "./AnimatedStat";
 export const Hero = () => {
   return (
     <section id="inicio" className="relative pt-20 pb-32 bg-gradient-to-br from-background via-background to-background overflow-hidden">
-      {/* Background Video - Neon effect */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen z-0"
-      >
-        <source src="/videos/hub360-glow.mp4" type="video/mp4" />
-        {/* Fallback para navegadores sem suporte */}
-      </video>
+      {/* Background GIF - Neon effect */}
+      <img 
+        src="/hub360-glow.gif"
+        alt="HUB360+ Neon Effect"
+        className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen pointer-events-none z-0"
+      />
       
       {/* Background Elements - Neon glow effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neon-purple/10 via-transparent to-transparent z-[1]" />
