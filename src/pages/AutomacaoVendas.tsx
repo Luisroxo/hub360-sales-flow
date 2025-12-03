@@ -175,7 +175,7 @@ const AutomacaoVendas = () => {
                   color: "neon-orange"
                 },
                 {
-                  title: "Custos de licenças e configurações são divididos",
+                  title: "Transformamos o seu WhatsApp em um verdadeiro balcão de vendas digital",
                   color: "neon-purple"
                 },
                 {
