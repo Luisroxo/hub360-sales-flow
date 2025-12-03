@@ -81,7 +81,7 @@ export const Header = () => {
               <img 
                 src={logoHub360} 
                 alt="HUB360+ - Juntos Vendemos Mais" 
-                className="h-16 w-auto"
+                className="h-auto w-[200px]"
                 onError={(e) => {
                   console.log('Erro ao carregar imagem do header:', e);
                   e.currentTarget.style.display = 'none';
