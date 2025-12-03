@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import logoHub360 from "@/assets/logo-hub360.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,9 +79,9 @@ export const Header = () => {
           <div className="flex items-center space-x-2">
             <Link to="/">
               <img 
-                src="/lovable-uploads/6395007d-7a45-4bab-81d6-de70f799376d.png" 
-                alt="HUB360PLUS" 
-                className="h-20 w-auto brightness-110"
+                src={logoHub360} 
+                alt="HUB360+ - Juntos Vendemos Mais" 
+                className="h-16 w-auto"
                 onError={(e) => {
                   console.log('Erro ao carregar imagem do header:', e);
                   e.currentTarget.style.display = 'none';
