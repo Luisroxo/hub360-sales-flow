@@ -73,7 +73,7 @@ const AutomacaoVendas = () => {
             </h2>
             
             <p className="text-lg text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Potencialize seu processo comercial com sistemas inteligentes que operam 24/7 para maximizar suas conversões
+              Implantamos e operamos juntos sistemas inteligentes de vendas. Não apenas configuramos CRMs e chatbots — gerenciamos a operação com você, compartilhando investimentos e resultados.
             </p>
           </div>
         </div>
@@ -150,6 +150,52 @@ const AutomacaoVendas = () => {
         </div>
       </section>
 
+      {/* Como Funciona - JV Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Modelo Joint Venture em{" "}
+                <span className="text-neon-green">Automação</span>
+              </h2>
+              <p className="text-xl text-foreground/70">
+                Parceria real com responsabilidades e resultados compartilhados
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  title: "HUB360+ assume implantação e gestão de CRM, chatbots e automações",
+                  color: "neon-green"
+                },
+                {
+                  title: "Parceiro fornece leads, processos de negócio e dados",
+                  color: "neon-orange"
+                },
+                {
+                  title: "Custos de licenças e configurações são divididos",
+                  color: "neon-purple"
+                },
+                {
+                  title: "Ganhos de produtividade e vendas são mensurados e compartilhados",
+                  color: "neon-blue"
+                }
+              ].map((item, index) => (
+                <div 
+                  key={index}
+                  className={`bg-card/30 backdrop-blur-sm p-6 rounded-xl border-2 neon-border-${item.color} flex items-start gap-4`}
+                >
+                  <CheckCircle className={`w-6 h-6 text-${item.color} flex-shrink-0 mt-1`} />
+                  <p className="text-foreground/80 font-medium">{item.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Results Section */}
       <section className="py-20 bg-gradient-to-r from-neon-purple/20 to-neon-blue/20 backdrop-blur-sm border-y-2 border-neon-purple/30">
         <div className="container mx-auto px-4">
@@ -181,6 +227,41 @@ const AutomacaoVendas = () => {
                 </div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon-green/10 rounded-full filter blur-[150px]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Pronto para Automatizar Vendas{" "}
+              <span className="text-neon-green">em Parceria?</span>
+            </h2>
+            <p className="text-xl text-foreground/70 mb-10">
+              Agende uma reunião e entenda como estruturar uma JV focada em automação comercial e inteligência de vendas.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                variant="neon" 
+                size="lg"
+                onClick={() => window.open('https://hub360mais.odoo.com/contact', '_blank')}
+                className="text-lg px-8"
+              >
+                Agendar reunião
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              <Button 
+                variant="neonOutline" 
+                size="lg"
+                onClick={() => window.location.href = '/#joint-venture'}
+                className="text-lg px-8"
+              >
+                Saiba mais sobre JV
+              </Button>
             </div>
           </div>
         </div>
