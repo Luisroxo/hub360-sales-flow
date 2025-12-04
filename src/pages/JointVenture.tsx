@@ -108,7 +108,7 @@ const JointVenture = () => {
             variant="neon" 
             size="lg" 
             className="text-lg px-8 py-6"
-            onClick={() => window.open('https://wa.me/5511953470544?text=Olá! Gostaria de agendar uma reunião de avaliação de parceria.', '_blank')}
+            onClick={() => (window as any).Calendly?.initPopupWidget({url: 'https://calendly.com/hub360plus-lww/reuniao-45-mim'})}
           >
             Agendar Reunião de Avaliação
           </Button>
@@ -287,7 +287,7 @@ const JointVenture = () => {
               variant="neon" 
               size="lg" 
               className="text-lg px-10 py-7"
-              onClick={() => window.open('https://wa.me/5511953470544?text=Olá! Gostaria de agendar uma reunião de avaliação de parceria.', '_blank')}
+              onClick={() => (window as any).Calendly?.initPopupWidget({url: 'https://calendly.com/hub360plus-lww/reuniao-45-mim'})}
             >
               <Calendar className="w-5 h-5 mr-2" />
               Agendar Reunião com Especialista
