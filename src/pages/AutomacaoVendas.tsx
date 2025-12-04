@@ -52,8 +52,19 @@ const AutomacaoVendas = () => {
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-background relative overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-neon-green/10 rounded-full filter blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-neon-orange/10 rounded-full filter blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
+        >
+          <source src="/videos/background-stars.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-background/60 z-0" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-neon-green/10 rounded-full filter blur-[120px] animate-pulse z-0" />
+        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-neon-orange/10 rounded-full filter blur-[120px] animate-pulse z-0" style={{ animationDelay: '1s' }} />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-neon-green/10 text-neon-green px-6 py-3 rounded-full text-sm font-medium mb-8 border-2 border-neon-green/30 backdrop-blur-sm">
