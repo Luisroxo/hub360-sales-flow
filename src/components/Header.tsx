@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import logoHub360 from "@/assets/logo-hub360.png";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,6 +57,7 @@ export const Header = () => {
               variant="neon"
             >
               <a href="https://wa.me/5511953470544?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20HUB360%2B" target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon className="mr-2" size={18} />
                 Falar com especialista
               </a>
             </Button>
@@ -91,6 +93,7 @@ export const Header = () => {
                 className="mt-4"
               >
                 <a href="https://wa.me/5511953470544?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20HUB360%2B" target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="mr-2" size={18} />
                   Falar com especialista
                 </a>
               </Button>

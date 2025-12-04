@@ -3,7 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Target, Users, Zap, Heart, Lightbulb, Eye, CheckCircle, MessageSquare, Handshake, Check, Calendar, MessageCircle } from "lucide-react";
+import { Target, Users, Zap, Heart, Lightbulb, Eye, CheckCircle, MessageSquare, Handshake, Check, Calendar } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 
 const Sobre = () => {
@@ -250,7 +251,7 @@ const Sobre = () => {
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
-                        <MessageCircle className="mr-2 h-5 w-5" />
+                        <WhatsAppIcon className="mr-2" size={20} />
                         Falar com especialista
                       </a>
                     </Button>
