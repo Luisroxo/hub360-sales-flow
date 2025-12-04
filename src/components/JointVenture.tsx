@@ -1,5 +1,6 @@
 import { HandshakeIcon, TrendingUp, Cog, Database, Target, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const JointVenture = () => {
   const hub360Entrega = [
@@ -82,10 +83,12 @@ export const JointVenture = () => {
 
           {/* CTA */}
           <div className="text-center">
-            <Button variant="neon" size="lg" className="text-lg px-8 py-6">
-              Saiba mais sobre a JV
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/joint-venture">
+              <Button variant="neon" size="lg" className="text-lg px-8 py-6">
+                Saiba mais sobre a JV
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
