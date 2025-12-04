@@ -73,12 +73,6 @@ const Licitacoes = () => {
               <strong className="text-neon-cyan">Estruturamos parcerias para atuação no setor público, dividindo responsabilidades e resultados.</strong> Não apenas preparamos licitações — operamos juntos para vencer. Deixe a burocracia conosco e concentre-se em entregar seus produtos e serviços para um cliente com grande escala e potencial de crescimento.
             </p>
             
-            <Button 
-              size="lg" 
-              variant="neon"
-            >
-              Começar agora
-            </Button>
           </div>
         </div>
       </section>
