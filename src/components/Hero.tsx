@@ -37,18 +37,6 @@ export const Hero = () => {
               Criamos juntos um novo braço comercial. Parceria real, responsabilidades compartilhadas, resultados divididos.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#jv">
-                <button className="px-8 py-4 bg-gradient-to-r from-neon-purple to-neon-blue text-white font-semibold rounded-full hover:scale-105 transition-transform duration-300 neon-glow-purple">
-                  Quero ser parceiro JV
-                </button>
-              </a>
-              <a href="#como-funciona">
-                <button className="px-8 py-4 bg-transparent border-2 border-neon-purple text-neon-purple font-semibold rounded-full hover:bg-neon-purple/10 transition-all duration-300">
-                  Como funciona
-                </button>
-              </a>
-            </div>
           </div>
           
           {/* Stats with Animation */}
