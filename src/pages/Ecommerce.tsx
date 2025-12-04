@@ -73,12 +73,6 @@ const Ecommerce = () => {
               <strong className="text-neon-purple">Criamos e operamos juntos canais de vendas online.</strong> Não apenas montamos sua loja — vendemos com você, dividindo estratégias, custos e resultados. Oferecemos uma abordagem integrada que combina estratégia, gestão eficiente e tecnologia de ponta para transformar desafios em crescimento sustentável.
             </p>
             
-            <Button 
-              size="lg" 
-              variant="neon"
-            >
-              Começar agora
-            </Button>
           </div>
         </div>
       </section>
