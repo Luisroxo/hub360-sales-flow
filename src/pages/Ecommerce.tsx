@@ -58,7 +58,7 @@ const Ecommerce = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
         >
-          <source src="/videos/background-particles.mp4" type="video/mp4" />
+          <source src="/videos/background-stars.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-background/60 z-0" />
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full filter blur-[120px] animate-pulse z-0" />

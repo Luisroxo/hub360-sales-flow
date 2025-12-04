@@ -65,7 +65,18 @@ const Sobre = () => {
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-background relative overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full filter blur-[120px]" />
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
+        >
+          <source src="/videos/background-stars.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-background/60 z-0" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full filter blur-[120px] z-0" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-neon-purple/10 text-neon-purple hover:bg-neon-purple/20 border-2 border-neon-purple/30">
