@@ -201,10 +201,19 @@ const Licitacoes = () => {
                 Agende uma reunião e entenda como estruturar uma JV focada em vendas públicas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="neon">
+                <Button 
+                  size="lg" 
+                  variant="neon"
+                  onClick={() => (window as any).Calendly?.initPopupWidget({url: 'https://calendly.com/hub360plus-lww/reuniao-45-mim'})}
+                >
                   Agendar reunião
                 </Button>
-                <Button size="lg" variant="outline" className="border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan/10">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan/10"
+                  onClick={() => window.location.href = '/#joint-venture'}
+                >
                   Saiba mais sobre JV
                 </Button>
               </div>
