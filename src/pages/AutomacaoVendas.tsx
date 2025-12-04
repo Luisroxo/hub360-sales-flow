@@ -248,7 +248,7 @@ const AutomacaoVendas = () => {
               <Button 
                 variant="neon" 
                 size="lg"
-                onClick={() => window.open('https://hub360mais.odoo.com/contact', '_blank')}
+                onClick={() => (window as any).Calendly?.initPopupWidget({url: 'https://calendly.com/hub360plus-lww/reuniao-45-mim'})}
                 className="text-lg px-8"
               >
                 Agendar reunião

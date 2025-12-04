@@ -234,7 +234,7 @@ const Sobre = () => {
                     <Button 
                       size="lg" 
                       className="bg-gradient-to-r from-neon-purple to-neon-blue hover:opacity-90 text-white"
-                      onClick={() => window.open('https://calendly.com/hub360', '_blank')}
+                      onClick={() => (window as any).Calendly?.initPopupWidget({url: 'https://calendly.com/hub360plus-lww/reuniao-45-mim'})}
                     >
                       <Calendar className="mr-2 h-5 w-5" />
                       Agendar reunião com nosso time
