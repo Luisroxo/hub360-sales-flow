@@ -243,10 +243,16 @@ const Sobre = () => {
                       size="lg" 
                       variant="outline"
                       className="border-neon-purple/50 text-neon-purple hover:bg-neon-purple/10"
-                      onClick={() => window.open('https://hub360.odoo.com/contactus', '_blank')}
+                      asChild
                     >
-                      <MessageCircle className="mr-2 h-5 w-5" />
-                      Falar com especialista
+                      <a 
+                        href="https://wa.me/5511953470544?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20HUB360%2B" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <MessageCircle className="mr-2 h-5 w-5" />
+                        Falar com especialista
+                      </a>
                     </Button>
                   </div>
                   
