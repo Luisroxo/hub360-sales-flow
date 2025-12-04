@@ -16,61 +16,6 @@ export const Header = () => {
     { to: "/automacao-vendas", label: "Automação de Vendas" }
   ];
 
-  const waitForOdooChat = (maxAttempts = 10, interval = 500) => {
-    return new Promise<HTMLElement | any>((resolve, reject) => {
-      let attempts = 0;
-      
-      const checkChat = () => {
-        attempts++;
-        console.log(`Tentativa ${attempts} de encontrar o chat do Odoo`);
-        
-        // Verifica se o botão do chat existe no DOM
-        const chatButton = document.querySelector('.o_livechat_button') as HTMLElement;
-        if (chatButton && chatButton.offsetParent !== null) {
-          console.log('Botão do chat encontrado no DOM');
-          resolve(chatButton);
-          return;
-        }
-        
-        // Verifica se a API do Odoo está disponível
-        if (window.odoo?.im_livechat?.LivechatButton) {
-          console.log('API do Odoo encontrada');
-          resolve(window.odoo.im_livechat.LivechatButton);
-          return;
-        }
-        
-        if (attempts >= maxAttempts) {
-          console.log('Máximo de tentativas atingido');
-          reject(new Error('Chat do Odoo não foi carregado'));
-          return;
-        }
-        
-        setTimeout(checkChat, interval);
-      };
-      
-      checkChat();
-    });
-  };
-
-  const handleChatClick = async () => {
-    console.log('Iniciando abertura do chat...');
-    
-    try {
-      const chatElement = await waitForOdooChat();
-      
-      if (chatElement instanceof HTMLElement) {
-        console.log('Clicando no botão DOM do chat');
-        chatElement.click();
-      } else if (chatElement && typeof (chatElement as any).click === 'function') {
-        console.log('Usando API do Odoo para abrir chat');
-        (chatElement as any).click();
-      }
-    } catch (error) {
-      console.error('Erro ao tentar abrir o chat:', error);
-      alert('O chat ainda está carregando. Tente novamente em alguns segundos.');
-    }
-  };
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b-2 border-neon-purple/30">
       <div className="container mx-auto px-4 py-4">
@@ -107,10 +52,12 @@ export const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:flex">
             <Button 
-              onClick={handleChatClick}
+              asChild
               variant="neon"
             >
-              Falar com especialista
+              <a href="https://wa.me/5511953470544?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20HUB360%2B" target="_blank" rel="noopener noreferrer">
+                Falar com especialista
+              </a>
             </Button>
           </div>
 
@@ -139,11 +86,13 @@ export const Header = () => {
               ))}
               
               <Button 
-                onClick={handleChatClick}
+                asChild
                 variant="neon"
                 className="mt-4"
               >
-                Falar com especialista
+                <a href="https://wa.me/5511953470544?text=Olá!%20Gostaria%20de%20falar%20com%20um%20especialista%20HUB360%2B" target="_blank" rel="noopener noreferrer">
+                  Falar com especialista
+                </a>
               </Button>
             </div>
           </nav>
