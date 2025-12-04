@@ -40,6 +40,11 @@ export const Footer = () => {
             </Link>
           </div>
         </div>
+        
+        {/* Video Credits */}
+        <div className="text-center text-xs text-foreground/50 mt-4">
+          Vídeo de fundo por <a href="https://www.vecteezy.com" target="_blank" rel="noopener noreferrer" className="hover:text-neon-purple transition-colors">Vecteezy</a>
+        </div>
       </div>
     </footer>
   );
