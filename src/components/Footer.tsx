@@ -1,6 +1,7 @@
 
-import { Facebook, Instagram, Youtube, MessageCircle } from "lucide-react";
+import { Facebook, Instagram, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export const Footer = () => {
   return (
@@ -19,7 +20,7 @@ export const Footer = () => {
               <Youtube className="h-5 w-5" />
             </a>
             <a href="https://wa.me/5511953470544" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-neon-purple transition-colors">
-              <MessageCircle className="h-5 w-5" />
+              <WhatsAppIcon className="h-5 w-5" size={20} />
             </a>
           </div>
 
