@@ -191,7 +191,7 @@ const Ecommerce = () => {
                   size="lg" 
                   variant="outline" 
                   className="border-neon-purple/50 text-neon-purple hover:bg-neon-purple/10"
-                  onClick={() => window.location.href = '/#joint-venture'}
+                  onClick={() => window.location.href = '/joint-venture'}
                 >
                   Saiba mais sobre JV
                 </Button>

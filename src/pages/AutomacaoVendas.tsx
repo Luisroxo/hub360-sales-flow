@@ -268,7 +268,7 @@ const AutomacaoVendas = () => {
               <Button 
                 variant="neonOutline" 
                 size="lg"
-                onClick={() => window.location.href = '/#joint-venture'}
+                onClick={() => window.location.href = '/joint-venture'}
                 className="text-lg px-8"
               >
                 Saiba mais sobre JV

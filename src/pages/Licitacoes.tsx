@@ -217,7 +217,7 @@ const Licitacoes = () => {
                   size="lg" 
                   variant="outline" 
                   className="border-neon-cyan/50 text-neon-cyan hover:bg-neon-cyan/10"
-                  onClick={() => window.location.href = '/#joint-venture'}
+                  onClick={() => window.location.href = '/joint-venture'}
                 >
                   Saiba mais sobre JV
                 </Button>
