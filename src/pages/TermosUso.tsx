@@ -231,7 +231,7 @@ const TermosUso = () => {
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-neon-purple to-neon-blue hover:opacity-90 text-white"
-                  onClick={() => window.open('https://hub360.odoo.com/contactus', '_blank')}
+                  onClick={() => window.open('https://wa.me/5511953470544?text=Olá! Gostaria de falar com um especialista sobre os termos de parceria.', '_blank')}
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Falar com especialista
