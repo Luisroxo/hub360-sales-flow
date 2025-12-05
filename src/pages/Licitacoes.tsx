@@ -35,8 +35,9 @@ const Licitacoes = () => {
   ];
 
   const stats = [
-    { value: "R$ 31,4", label: "bilhões em compras homologadas no 1º trimestre de 2025" },
-    { value: "R$ 7", label: "bilhões destinados a ME/EPP" },
+    { value: "R$ 217", label: "bilhões em compras homologadas no 1º Semestre/25" },
+    { value: "R$ 54", label: "bilhões destinados a ME/EPP" },
+    { value: "119", label: "mil processos" },
     { value: "100%", label: "compliance com a Nova Lei de Licitações" }
   ];
 
@@ -77,7 +78,7 @@ const Licitacoes = () => {
             </h1>
             
             <p className="text-xl text-foreground/70 mb-12 leading-relaxed max-w-4xl">
-              Desbloqueie um mercado de bilhões! O governo brasileiro é o maior comprador do país, movimentando cifras impressionantes – como os R$ 31,4 bilhões em compras homologadas apenas no primeiro trimestre de 2025. Destes, R$ 7 bilhões foram destinados a Micro e Pequenas Empresas (ME/EPP), demonstrando um vasto campo de oportunidades para negócios de todos os portes.
+              Desbloqueie um mercado de bilhões! O governo brasileiro é o maior comprador do país, movimentando cifras impressionantes – como os R$ 217 bilhões em compras homologadas no primeiro semestre de 2025, com mais de 119 mil processos. Destes, R$ 54 bilhões foram destinados a Micro e Pequenas Empresas (ME/EPP), demonstrando um vasto campo de oportunidades para negócios de todos os portes.
             </p>
 
             <p className="text-lg text-foreground/70 mb-12 leading-relaxed max-w-4xl">
@@ -91,9 +92,12 @@ const Licitacoes = () => {
       {/* Stats Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <h3 className="text-center text-2xl md:text-3xl font-bold text-foreground mb-8">
+            Compras Homologadas - 1º Semestre/25
+          </h3>
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => {
-              const colors = ['text-neon-blue', 'text-neon-cyan', 'text-neon-green'];
+              const colors = ['text-neon-blue', 'text-neon-cyan', 'text-neon-purple', 'text-neon-green'];
               return (
                 <div key={index} className="text-center">
                   <div className={`text-4xl md:text-5xl font-bold ${colors[index]} mb-2`}>
