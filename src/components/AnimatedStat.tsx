@@ -3,13 +3,14 @@ import { useCountAnimation } from "@/hooks/useCountAnimation";
 
 interface AnimatedStatProps {
   value: number;
+  prefix?: string;
   suffix?: string;
   label: string;
   delay?: number;
   color?: 'purple' | 'blue' | 'green' | 'orange' | 'pink';
 }
 
-export const AnimatedStat = ({ value, suffix = "", label, delay = 0, color = 'purple' }: AnimatedStatProps) => {
+export const AnimatedStat = ({ value, prefix = "", suffix = "", label, delay = 0, color = 'purple' }: AnimatedStatProps) => {
   const { count, ref } = useCountAnimation({ 
     end: value, 
     duration: 2000 + delay 
@@ -26,7 +27,7 @@ export const AnimatedStat = ({ value, suffix = "", label, delay = 0, color = 'pu
   return (
     <div ref={ref} className={`text-center p-8 rounded-2xl bg-card/30 backdrop-blur-sm ${colorClasses[color]} border-2 transition-all hover:scale-105`}>
       <div className={`text-5xl md:text-6xl font-bold mb-3 ${colorClasses[color].split(' ')[0]}`}>
-        {count}{suffix}
+        {prefix}{count}{suffix}
       </div>
       <div className="text-foreground/70 text-lg">{label}</div>
     </div>
