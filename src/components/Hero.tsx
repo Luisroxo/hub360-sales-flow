@@ -47,23 +47,24 @@ export const Hero = () => {
           {/* Stats with Animation */}
           <div className="grid md:grid-cols-3 gap-8 mt-20">
             <AnimatedStat 
-              value={500} 
+              value={10} 
               suffix="+" 
-              label="Projetos realizados"
+              label="Joint Ventures Ativas"
               delay={0}
               color="purple"
             />
             <AnimatedStat 
-              value={98} 
-              suffix="%" 
-              label="Taxa de sucesso"
+              value={3} 
+              prefix="R$ "
+              suffix="M+" 
+              label="Faturamento Conjunto"
               delay={300}
               color="blue"
             />
             <AnimatedStat 
-              value={24} 
-              suffix="h" 
-              label="Tempo de resposta"
+              value={3} 
+              suffix=" dias" 
+              label="Onboarding"
               delay={600}
               color="green"
             />
