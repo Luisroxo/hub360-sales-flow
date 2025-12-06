@@ -24,7 +24,7 @@ export const Header = () => {
           <img 
             src={logoHub360} 
             alt="HUB360+ - Juntos Vendemos Mais" 
-            className="w-[112px] h-[112px] object-contain"
+            className="w-[168px] h-[168px] object-contain"
           />
         </Link>
           
