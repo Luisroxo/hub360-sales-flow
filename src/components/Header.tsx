@@ -18,13 +18,13 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b-2 border-neon-purple/30">
-      <div className="container mx-auto px-4 py-[5px] flex items-center justify-between">
+      <div className="container mx-auto px-3 py-[4px] flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
           <img 
             src={logoHub360} 
             alt="HUB360+ - Juntos Vendemos Mais" 
-            className="w-[120px] h-[120px] object-contain"
+            className="w-[90px] h-[90px] object-contain"
           />
         </Link>
           
