@@ -78,7 +78,7 @@ const JointVenture = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-36">
         <video
           autoPlay
           loop

@@ -51,7 +51,7 @@ const AutomacaoVendas = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-background relative overflow-hidden">
+      <section className="pt-36 pb-20 bg-background relative overflow-hidden">
         {/* Video Background */}
         <video
           autoPlay

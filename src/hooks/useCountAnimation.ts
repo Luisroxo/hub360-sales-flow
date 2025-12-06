@@ -47,7 +47,7 @@ export const useCountAnimation = ({
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
       
-      // Easing function for smooth animation
+      // Função de suavização para animação suave
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentValue = Math.floor(startValue + (end - startValue) * easeOutQuart);
       

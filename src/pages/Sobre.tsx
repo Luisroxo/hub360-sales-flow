@@ -64,7 +64,7 @@ const Sobre = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-background relative overflow-hidden">
+      <section className="pt-36 pb-16 bg-background relative overflow-hidden">
         {/* Video Background */}
         <video
           autoPlay

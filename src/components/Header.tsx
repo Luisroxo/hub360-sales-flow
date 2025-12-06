@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import logoHub360 from "@/assets/logo-hub360-new.png";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { LogoHub360 } from "@/components/LogoHub360";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,15 +17,11 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b-2 border-neon-purple/30">
-      <div className="container mx-auto px-3 py-[4px] flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-lg border-b border-white/5 h-[100px] flex items-center">
+      <div className="container mx-auto px-4 lg:px-6 h-full flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex-shrink-0">
-          <img 
-            src={logoHub360} 
-            alt="HUB360+ - Juntos Vendemos Mais" 
-            className="w-[168px] h-[168px] object-contain"
-          />
+        <Link to="/" className="flex-shrink-0 flex items-center">
+          <LogoHub360 className="w-[250px] h-[80px]" />
         </Link>
           
         {/* Desktop Navigation */}

@@ -3,7 +3,7 @@ import { AnimatedStat } from "./AnimatedStat";
 
 export const Hero = () => {
   return (
-    <section id="inicio" className="relative pt-20 pb-32 bg-gradient-to-br from-background via-background to-background overflow-hidden">
+    <section id="inicio" className="relative pt-36 pb-32 bg-gradient-to-br from-background via-background to-background overflow-hidden">
       {/* Video Background */}
       <video
         autoPlay
