@@ -22,7 +22,7 @@ export const Hero = () => {
       <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-neon-blue/20 rounded-full filter blur-[100px] animate-pulse z-[1]" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-neon-green/10 rounded-full filter blur-[100px] animate-pulse z-[1]" style={{ animationDelay: '2s' }} />
       
-      <div className="relative container mx-auto px-4 py-20 z-10">
+      <div className="relative container mx-auto px-4 z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto mb-16">
             {/* Badge */}
@@ -32,7 +32,7 @@ export const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-8xl font-extrabold text-foreground mb-8 tracking-tight leading-tight">
-              Não vendemos para você —{" "}
+              Não vendemos para você {" "}
               <span className="gradient-text-neon">
                 vendemos COM você
               </span>

@@ -17,11 +17,11 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-lg border-b border-white/5 h-[100px] flex items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent border-b border-white/5 h-[120px] flex items-center">
       <div className="container mx-auto px-4 lg:px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 flex items-center">
-          <LogoHub360 className="w-[250px] h-[80px]" />
+          <LogoHub360 className="w-[300px] h-[90px]" />
         </Link>
           
         {/* Desktop Navigation */}
