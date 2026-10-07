@@ -15,10 +15,10 @@ const TermosUso = () => {
         <>
           <p className="text-foreground/70 mb-4">
             Bem-vindo à HUB360+. Estes Termos de Uso regulam a relação de parceria através de Joint Venture Operacional 
-            entre a HUB360PLUS LTDA e seus parceiros comerciais. Ao firmar parceria conosco, você concorda com estes termos.
+            entre a HUB360PLUS INTELIGENCIA COMERCIAL LTDA, CNPJ 68.366.420/0001-20, e seus parceiros comerciais. Ao firmar parceria conosco, você concorda com estes termos.
           </p>
           <p className="text-sm text-foreground/50">
-            Última atualização: 02/12/2025
+            Última atualização: 07/10/2026
           </p>
         </>
       )

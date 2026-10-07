@@ -26,7 +26,10 @@ export const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center text-sm text-foreground/70">
-            Copyright © 2025 HUB360PLUS LTDA — Todos os Direitos Reservados
+            <p>Copyright © 2026 HUB360PLUS INTELIGENCIA COMERCIAL LTDA — Todos os Direitos Reservados</p>
+            <p className="text-xs text-foreground/50 mt-1">
+              CNPJ 68.366.420/0001-20 · Avenida Paulista, 2073, Sala 2220, Bela Vista, São Paulo/SP, CEP 01311-940 · Telefone (11) 91974-7859
+            </p>
           </div>
 
           {/* Terms and Privacy Links */}

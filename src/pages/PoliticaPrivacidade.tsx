@@ -26,7 +26,8 @@ const sections = [
     content: (
       <div className="space-y-4 text-foreground/80">
         <p>
-          A <strong className="text-neon-purple">HUB360PLUS LTDA</strong>, pessoa jurídica de direito privado, com sede em São Paulo, SP, 
+          A <strong className="text-neon-purple">HUB360PLUS INTELIGENCIA COMERCIAL LTDA</strong>, inscrita no CNPJ sob o nº 68.366.420/0001-20,
+          pessoa jurídica de direito privado, com sede em São Paulo, SP,
           doravante denominada simplesmente "HUB360+", está comprometida com a proteção da privacidade e dos dados pessoais 
           de seus usuários, parceiros e visitantes.
         </p>
@@ -136,28 +137,16 @@ const sections = [
   {
     icon: Cookie,
     number: "6",
-    title: "Cookies e Rastreamento",
+    title: "Cookies",
     content: (
       <div className="space-y-4 text-foreground/80">
         <p>
-          Nosso site utiliza cookies e tecnologias similares para melhorar sua experiência de navegação:
+          Nosso site não utiliza cookies de análise nem de marketing. Serviços de terceiros incorporados ao site,
+          como o Calendly (agendamento de reuniões), podem definir seus próprios cookies ao serem usados, regidos
+          pelas respectivas políticas de privacidade.
         </p>
-        <div className="space-y-3">
-          <div className="p-3 bg-card/50 rounded-lg border border-border/50">
-            <strong className="text-neon-purple">Cookies essenciais:</strong>
-            <p className="text-sm mt-1">Necessários para o funcionamento básico do site (sessão, preferências).</p>
-          </div>
-          <div className="p-3 bg-card/50 rounded-lg border border-border/50">
-            <strong className="text-neon-blue">Cookies de análise:</strong>
-            <p className="text-sm mt-1">Google Analytics para entender como os usuários navegam (dados anonimizados).</p>
-          </div>
-          <div className="p-3 bg-card/50 rounded-lg border border-border/50">
-            <strong className="text-neon-green">Cookies de marketing:</strong>
-            <p className="text-sm mt-1">Para exibição de anúncios relevantes (Google Ads, Meta Pixel).</p>
-          </div>
-        </div>
         <p className="mt-4">
-          <strong>Gerenciamento:</strong> Você pode configurar seu navegador para recusar cookies ou ser alertado 
+          <strong>Gerenciamento:</strong> Você pode configurar seu navegador para recusar cookies ou ser alertado
           quando um cookie for enviado. A desativação pode afetar algumas funcionalidades do site.
         </p>
       </div>
@@ -320,15 +309,17 @@ const sections = [
         <div className="p-6 bg-gradient-to-br from-neon-purple/10 to-neon-blue/10 rounded-lg border border-neon-purple/30 mt-4">
           <h4 className="font-bold text-lg mb-4 text-foreground">Dados da Empresa Controladora:</h4>
           <div className="space-y-2">
-            <p><strong>Razão Social:</strong> HUB360PLUS LTDA</p>
-            <p><strong>Localização:</strong> São Paulo, SP - Brasil</p>
+            <p><strong>Razão Social:</strong> HUB360PLUS INTELIGENCIA COMERCIAL LTDA</p>
+            <p><strong>CNPJ:</strong> 68.366.420/0001-20</p>
+            <p><strong>Endereço:</strong> Avenida Paulista, 2073, Sala 2220, Bela Vista, São Paulo, SP - CEP 01311-940</p>
+            <p><strong>Telefone:</strong> (11) 91974-7859</p>
             <p><strong>E-mail:</strong> contato@hub360plus.com.br</p>
             <p><strong>WhatsApp:</strong> +55 11 95347-0544</p>
           </div>
         </div>
 
         <div className="mt-6 p-4 bg-neon-green/10 rounded-lg border border-neon-green/30 text-center">
-          <p className="text-lg font-semibold text-neon-green">Data de Vigência: 05 de Dezembro de 2025</p>
+          <p className="text-lg font-semibold text-neon-green">Data de Vigência: 07 de Outubro de 2026</p>
           <p className="text-sm text-foreground/60 mt-1">Última atualização desta política</p>
         </div>
       </div>
