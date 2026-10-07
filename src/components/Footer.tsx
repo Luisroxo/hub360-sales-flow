@@ -34,6 +34,10 @@ export const Footer = () => {
 
           {/* Terms and Privacy Links */}
           <div className="flex items-center space-x-4 text-sm">
+            <Link to="/plataforma" className="text-foreground hover:text-neon-purple transition-colors">
+              Plataforma
+            </Link>
+            <span className="text-neon-purple/50">|</span>
             <Link to="/termos-uso" className="text-foreground hover:text-neon-purple transition-colors">
               Termos de Uso
             </Link>
